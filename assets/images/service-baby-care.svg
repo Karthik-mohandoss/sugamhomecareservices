@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bcBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB"/>
+      <stop offset="100%" stop-color="#FEF3C7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#bcBg)"/>
+  
+  <!-- Baby Crib / Nursery visual -->
+  <g transform="translate(180, 110)">
+    <circle cx="120" cy="110" r="90" fill="#FFFFFF"/>
+    <!-- Gentle Baby Carriage / Cradle -->
+    <path d="M60 110 C60 70 110 70 120 110 L180 110 C180 145 150 170 110 170 C70 170 60 145 60 110 Z" fill="#FDE68A" stroke="#D97706" stroke-width="3"/>
+    <circle cx="90" cy="170" r="14" fill="#0F2C59"/>
+    <circle cx="90" cy="170" r="6" fill="#FFFFFF"/>
+    <circle cx="150" cy="170" r="14" fill="#0F2C59"/>
+    <circle cx="150" cy="170" r="6" fill="#FFFFFF"/>
+    <!-- Handle -->
+    <path d="M180 110 L200 80" stroke="#0F2C59" stroke-width="4" stroke-linecap="round"/>
+    <!-- Sleeping Baby moon/star -->
+    <path d="M90 75 Q95 65 105 70 Q98 75 90 75 Z" fill="#0D9488"/>
+  </g>
+
+  <g transform="translate(180, 40)">
+    <rect width="240" height="50" rx="25" fill="#FFFFFF" stroke="#D97706" stroke-width="1.5"/>
+    <circle cx="25" cy="25" r="15" fill="#FEF3C7"/>
+    <circle cx="25" cy="25" r="7" fill="#D97706"/>
+    <text x="50" y="31" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#0F2C59">Baby Care Taker</text>
+  </g>
+</svg>

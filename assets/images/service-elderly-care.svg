@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ecBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#ecBg)"/>
+  
+  <g transform="translate(170, 90)">
+    <!-- Shield of Respect & Senior Care -->
+    <circle cx="130" cy="120" r="90" fill="#FFFFFF"/>
+    <!-- Walking Cane & Helping Hand -->
+    <path d="M100 80 C100 65 125 65 125 80 L125 180" stroke="#0F2C59" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M125 80 C125 90 145 90 145 80" stroke="#0F2C59" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <!-- Heart of Compassion -->
+    <path d="M160 110 C155 95 135 98 135 115 C135 135 160 155 160 155 C160 155 185 135 185 115 C185 98 165 95 160 110 Z" fill="#0D9488"/>
+  </g>
+
+  <g transform="translate(180, 40)">
+    <rect width="240" height="50" rx="25" fill="#FFFFFF" stroke="#0F2C59" stroke-width="1.5"/>
+    <circle cx="25" cy="25" r="15" fill="#EEF2FF"/>
+    <path d="M19 25L23 29L31 20" stroke="#0F2C59" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <text x="50" y="31" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#0F2C59">Elderly Care Services</text>
+  </g>
+</svg>

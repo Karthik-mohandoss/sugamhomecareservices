@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#0F2C59" />
+  <circle cx="32" cy="32" r="24" fill="#0D9488" fill-opacity="0.25" />
+  <!-- Roof -->
+  <path d="M32 16L18 28H23V44H41V28H46L32 16Z" fill="#FFFFFF" />
+  <!-- Heart -->
+  <path d="M32 26C30 23.5 26.5 24 26.5 27C26.5 30.5 32 34.5 32 34.5C32 34.5 37.5 30.5 37.5 27C37.5 24 34 23.5 32 26Z" fill="#0D9488" />
+  <!-- Caring Hand curve -->
+  <path d="M18 41C22 49 34 51 44 45" stroke="#14B8A6" stroke-width="3" stroke-linecap="round" fill="none" />
+</svg>

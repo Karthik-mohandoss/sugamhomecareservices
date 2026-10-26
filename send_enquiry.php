@@ -52,8 +52,9 @@ if (empty($phone) || strlen($phone) < 10) {
 $timestamp = date('d M Y, h:i A T');
 $clientIp  = $_SERVER['REMOTE_ADDR'] ?? 'Unknown';
 
-// Recipients
-$primaryEmail = 'sugamhomecare35@gmail.com';
+// Recipients (Both email addresses receive form enquiries)
+$recipients = ['sugamhomecare35@gmail.com', 'akrithmarketer@gmail.com'];
+$to = implode(', ', $recipients);
 
 // Quick WhatsApp link for admin to click and chat with customer
 $cleanPhoneForWa = preg_replace('/[^0-9]/', '', $phone);
@@ -156,8 +157,8 @@ $headers .= "From: Sugam Home Care <noreply@sugamhomecareservices.in>\r\n";
 $headers .= "Reply-To: Sugam Home Care <sugamhomecare35@gmail.com>\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 
-// 1. Send Email
-$mailSent = @mail($primaryEmail, $subject, $htmlBody, $headers);
+// 1. Send Email to both recipients
+$mailSent = @mail($to, $subject, $htmlBody, $headers);
 
 // 2. Permanent Server-side Backup Log (JSON lines)
 $logEntry = [

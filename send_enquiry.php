@@ -150,23 +150,29 @@ $plainText .= "Campaign Source: " . $utmSource . " " . $utmCampaign . "\n\n";
 $plainText .= "Call: tel:" . $phone . "\n";
 $plainText .= "WhatsApp: " . $waDirectLink . "\n";
 
-// Headers with proper return path and encoding
+// Headers with proper return path and domain alignment
 $headers  = "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 $headers .= "From: Sugam Home Care <noreply@sugamhomecareservices.in>\r\n";
-$headers .= "Reply-To: Sugam Home Care <sugamhomecare35@gmail.com>\r\n";
+$headers .= "Reply-To: Sugam Home Care <noreply@sugamhomecareservices.in>\r\n";
 $headers .= "Return-Path: <noreply@sugamhomecareservices.in>\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 
-// 1. Send Email individually to each recipient with explicit envelope sender
-$mailSuccessCount = 0;
-foreach ($recipients as $toEmail) {
-    if (filter_var($toEmail, FILTER_VALIDATE_EMAIL)) {
-        $sent = @mail($toEmail, $subject, $htmlBody, $headers, "-f noreply@sugamhomecareservices.in");
-        if ($sent) $mailSuccessCount++;
+// 1. Send Email to both recipients simultaneously (and loop as fallback)
+$toAll = implode(', ', $recipients);
+$mailSent = @mail($toAll, $subject, $htmlBody, $headers, "-f noreply@sugamhomecareservices.in");
+
+// If combined sending returned false, fallback to individual delivery
+if (!$mailSent) {
+    $mailSuccessCount = 0;
+    foreach ($recipients as $toEmail) {
+        if (filter_var($toEmail, FILTER_VALIDATE_EMAIL)) {
+            $sent = @mail($toEmail, $subject, $htmlBody, $headers, "-f noreply@sugamhomecareservices.in");
+            if ($sent) $mailSuccessCount++;
+        }
     }
+    $mailSent = ($mailSuccessCount > 0);
 }
-$mailSent = ($mailSuccessCount > 0);
 
 // 2. Permanent Server-side Backup Log (JSON lines)
 $logEntry = [

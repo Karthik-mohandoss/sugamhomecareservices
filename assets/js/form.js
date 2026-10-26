@@ -99,9 +99,9 @@ function handleFormSubmit(e) {
   }
 
   // Trigger Google Ads conversion event if configured
-  if (typeof gtag === 'function' && typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG.googleAds && SITE_CONFIG.googleAds.enabled) {
+  if (typeof gtag === 'function') {
     gtag('event', 'conversion', {
-      'send_to': `${SITE_CONFIG.googleAds.conversionId}/${SITE_CONFIG.googleAds.conversionLabel}`,
+      'send_to': 'AW-18536226621/A80wCLajtqodEL2-4YZF',
       'value': 1.0,
       'currency': 'INR'
     });

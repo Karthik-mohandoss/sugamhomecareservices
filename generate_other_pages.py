@@ -636,6 +636,14 @@ def generate_thank_you_page():
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {GOOGLE_ADS_HEAD}
+  <!-- Event snippet for Submit lead form conversion page -->
+  <script>
+    gtag('event', 'conversion', {{
+        'send_to': 'AW-18536226621/A80wCLajtqodEL2-4YZF',
+        'value': 1.0,
+        'currency': 'INR'
+    }});
+  </script>
   <title>Thank You | Sugam Home Care Services</title>
   <meta name="description" content="Thank you for contacting Sugam Home Care Services. Our care coordinator will call you back shortly.">
   <meta name="robots" content="noindex, follow">

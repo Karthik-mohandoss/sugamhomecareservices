@@ -1,7 +1,36 @@
 /**
  * Sugam Home Care Services - Main JavaScript
- * Handles navigation, mobile menu, accordions, modals, and dynamic config binding.
+ * Handles navigation, mobile menu, accordions, modals, dynamic config binding,
+ * and automatic cache-bust validation for CDN edge updates.
  */
+
+// Auto Cache-Buster: If edge CDN or browser cache serves stale HTML (e.g. Maid Services),
+// immediately force-refresh to load the latest live version seamlessly.
+(function() {
+  try {
+    const hasOldMaidService = document.querySelector('a[href*="maid-services"]');
+    const missingSeniorCare = !document.querySelector('a[href*="senior-citizen-care-services"]');
+    const isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.pathname === '';
+    
+    if (isHomePage && (hasOldMaidService || missingSeniorCare)) {
+      if (!window.location.search.includes('v=2')) {
+        const targetUrl = new URL(window.location.href);
+        targetUrl.searchParams.set('v', '2');
+        window.location.replace(targetUrl.toString());
+        return;
+      }
+    }
+    
+    // When cleanly loaded with fresh content, quietly remove the cache-bust query param from the address bar
+    if (window.location.search.includes('v=2') && !hasOldMaidService && !missingSeniorCare) {
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, '', window.location.pathname);
+      }
+    }
+  } catch (e) {
+    // Graceful fallback
+  }
+})();
 
 document.addEventListener('DOMContentLoaded', () => {
   initDynamicConfig();

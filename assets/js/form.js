@@ -133,7 +133,8 @@ function handleFormSubmit(e) {
       'Content-Type': 'application/json',
       'Accept': 'application/json'
     },
-    body: JSON.stringify(leadData)
+    body: JSON.stringify(leadData),
+    keepalive: true
   })
     .then(res => res.json())
     .catch(err => {

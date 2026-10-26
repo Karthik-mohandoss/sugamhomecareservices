@@ -297,9 +297,9 @@ def get_footer(depth=0):
 </div>
 
 <!-- Scripts -->
-<script src="{rel}assets/js/config.js"></script>
-<script src="{rel}assets/js/main.js"></script>
-<script src="{rel}assets/js/form.js"></script>
+<script src="{rel}assets/js/config.js?v=4"></script>
+<script src="{rel}assets/js/main.js?v=4"></script>
+<script src="{rel}assets/js/form.js?v=4"></script>
 '''
 
 print("Updated site_templates.py successfully!")

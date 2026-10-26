@@ -21,6 +21,8 @@ const SITE_CONFIG = {
   
   // Email
   email: "care@sugamhomecareservices.in",
+  enquiryEmail: "akrithmarketer@gmail.com",
+  enquiryRecipients: ["akrithmarketer@gmail.com", "care@sugamhomecareservices.in"],
   
   // Office Address (Chennai)
   address: {

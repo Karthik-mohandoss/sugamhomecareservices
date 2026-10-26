@@ -333,16 +333,6 @@ def generate_home_page():
               </select>
             </div>
 
-            <div class="form-group">
-              <label class="form-label" for="hero-preferredTime">Preferred Contact Time <span style="font-size:0.75rem; color:var(--text-light);">(Optional)</span></label>
-              <select id="hero-preferredTime" name="preferredTime" class="form-control form-select">
-                <option value="Anytime (As soon as possible)">Anytime (As soon as possible)</option>
-                <option value="Morning (9 AM - 12 PM)">Morning (9 AM - 12 PM)</option>
-                <option value="Afternoon (12 PM - 4 PM)">Afternoon (12 PM - 4 PM)</option>
-                <option value="Evening (4 PM - 8 PM)">Evening (4 PM - 8 PM)</option>
-              </select>
-            </div>
-
             <div class="form-consent">
               <input type="checkbox" id="hero-consent" name="consent" required checked>
               <label for="hero-consent">I agree to be contacted by Sugam Home Care Services to discuss my home care requirements.</label>

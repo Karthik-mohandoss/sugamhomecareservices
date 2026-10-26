@@ -26,7 +26,6 @@ function handleFormSubmit(e) {
   const nameInput = form.querySelector('input[name="fullName"]');
   const phoneInput = form.querySelector('input[name="phone"]');
   const serviceSelect = form.querySelector('select[name="service"]');
-  const contactTimeSelect = form.querySelector('select[name="preferredTime"]');
   const consentCheckbox = form.querySelector('input[name="consent"]');
 
   // Basic Validation
@@ -69,7 +68,6 @@ function handleFormSubmit(e) {
     fullName: nameInput.value.trim(),
     phone: phoneValue,
     service: serviceSelect.value,
-    preferredTime: contactTimeSelect ? contactTimeSelect.value : 'Anytime',
     submittedAt: new Date().toISOString(),
     pageUrl: window.location.pathname,
     pageTitle: document.title,
@@ -109,22 +107,42 @@ function handleFormSubmit(e) {
     });
   }
 
-  // Redirect to Thank You page after slight natural delay
-  setTimeout(() => {
-    // Navigate to /thank-you/ relative to root
-    const rootPath = window.location.pathname.includes('/sugam-home-care/') 
-      ? '/Users/karthik/.gemini/antigravity/scratch/sugam-home-care/thank-you/index.html'
-      : '/thank-you/';
-      
-    // Detect if running from local file system or web server
+  // Dispatch email notification via backend endpoint
+  const endpoint = window.location.protocol === 'file:' 
+    ? 'https://sugamhomecareservices.in/send_enquiry.php' 
+    : '/send_enquiry.php';
+
+  let hasNavigated = false;
+  const navigateToThankYou = () => {
+    if (hasNavigated) return;
+    hasNavigated = true;
     if (window.location.protocol === 'file:') {
-      // Find relative path to thank-you/index.html
       const isSubDir = window.location.pathname.split('/').filter(Boolean).length > 6;
       window.location.href = isSubDir ? '../thank-you/index.html' : 'thank-you/index.html';
     } else {
       window.location.href = '/thank-you/';
     }
-  }, 600);
+  };
+
+  // Safe timeout: never leave visitor hanging if network is slow
+  const fallbackTimer = setTimeout(navigateToThankYou, 2500);
+
+  fetch(endpoint, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify(leadData)
+  })
+    .then(res => res.json())
+    .catch(err => {
+      console.warn("Server email dispatch notice:", err);
+    })
+    .finally(() => {
+      clearTimeout(fallbackTimer);
+      navigateToThankYou();
+    });
 }
 
 function showFormError(inputEl, message) {

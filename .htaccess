@@ -56,5 +56,10 @@ Header set X-Frame-Options "SAMEORIGIN"
 Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
 
-# 5. Disable Directory Browsing
+# 5. Disable Directory Browsing & Protect Sensitive Files
 Options -Indexes
+
+<FilesMatch "^\.|\.(jsonl|log|ini|sh|py)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

@@ -36,8 +36,17 @@ ExpiresByType image/svg+xml "access plus 1 year"
 ExpiresByType text/css "access plus 1 month"
 ExpiresByType application/javascript "access plus 1 month"
 ExpiresByType text/javascript "access plus 1 month"
-ExpiresDefault "access plus 2 days"
+ExpiresByType text/html "access plus 0 seconds"
 </IfModule>
+
+# HTML pages must not be cached aggressively by CDN or Browser
+<FilesMatch "\.(html|htm)$">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+  </IfModule>
+</FilesMatch>
 
 # 4. Security Headers
 <IfModule mod_headers.c>

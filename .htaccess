@@ -1,10 +1,17 @@
 # Sugam Home Care Services - Apache Web Server Optimization (.htaccess)
 
-# 1. Force HTTPS
+# 1. Force HTTPS & Canonical Redirects
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect old service URLs to new service URLs
+Redirect 301 /maid-services/ /caretaker-services-at-home/
+Redirect 301 /baby-care-taker/ /baby-care-services/
+Redirect 301 /caretaker-services/ /caretaker-services-at-home/
+Redirect 301 /home-health-care-services/ /home-health-care-for-seniors/
+Redirect 301 /nursing-services-at-home/ /nursing-services/
 
 # Ensure trailing slash on directories for clean SEO URLs
 RewriteCond %{REQUEST_FILENAME} !-f

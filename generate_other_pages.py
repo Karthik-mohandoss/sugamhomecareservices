@@ -4,6 +4,29 @@ from site_templates import get_header, get_footer
 
 ROOT_DIR = "/Users/karthik/.gemini/antigravity/scratch/sugam-home-care"
 
+LOCATIONS = [
+    "Tambaram", "Vandalur", "Guduvanchery", "Sholinganallur", "Navalur", "OMR", "ECR", 
+    "Adyar", "Velachery", "Nanganallur", "Madipakkam", "Pallavaram", "Chromepet", 
+    "Alandur", "Guindy", "Adambakkam", "Taramani", "Nungambakkam", "Kodambakkam", 
+    "Chetpet", "Egmore", "Thousand Lights", "Royapettah", "Anna Nagar", "Mogappair", 
+    "Ambattur", "Avadi", "Porur", "Iyyappanthangal", "Ayanavaram", "Royapuram", 
+    "Purasawalkam", "Panaiyur", "Thoraipakkam", "Perungudi", "T. Nagar", "Ashok Nagar"
+]
+
+SERVICES_DIRECTORY = [
+    {"name": "Baby care services", "slug": "baby-care-services", "icon": "👶", "badge": "Infant & Mother", "img": "service-baby-care.svg", "desc": "Tender infant care, newborn massage, warm bath, bottle feeding, and restful recovery support for mothers."},
+    {"name": "Elderly care services", "slug": "elderly-care-services", "icon": "🧓", "badge": "Senior Well-Being", "img": "service-elderly-care.svg", "desc": "Dignified senior care supporting mobility, fall prevention, personal hygiene, and loving companionship."},
+    {"name": "Patient care services", "slug": "patient-care-services", "icon": "🛏️", "badge": "Bedside Recovery", "img": "service-patient-care.svg", "desc": "Attentive bedside support for recovering patients, mobility assistance, sponge bathing, and feeding."},
+    {"name": "Senior citizen care services", "slug": "senior-citizen-care-services", "icon": "👴", "badge": "Senior Assistance", "img": "service-senior-citizen.svg", "desc": "Active daily living support, walking assistance, nutritious meal help, and empathetic presence."},
+    {"name": "Bedridden patient care services", "slug": "bedridden-patient-care-services", "icon": "🛌", "badge": "Intensive Bedside", "img": "service-bedridden.svg", "desc": "Specialized bed care: 2-hour body repositioning, bedsore prevention, bed bathing, and diaper hygiene."},
+    {"name": "Home health care for seniors", "slug": "home-health-care-for-seniors", "icon": "🩺", "badge": "Health Monitoring", "img": "service-home-health.svg", "desc": "Structured vitals monitoring (BP, sugar, pulse), medication schedule oversight, and geriatric wellness."},
+    {"name": "Dementia care for the elderly", "slug": "dementia-care-for-the-elderly", "icon": "🧠", "badge": "Specialized Memory", "img": "service-dementia.svg", "desc": "Specialized memory support, wandering safety, reassuring routines, and calm patience for Alzheimer's patients."},
+    {"name": "Home care for cancer patients", "slug": "home-care-for-cancer-patients", "icon": "🎗️", "badge": "Supportive Oncology", "img": "service-cancer-care.svg", "desc": "Post-chemotherapy recovery, comfort positioning, nutrition tracking, and palliative home companionship."},
+    {"name": "Caretaker services at home", "slug": "caretaker-services-at-home", "icon": "🤝", "badge": "Everyday Living", "img": "service-caretaker.svg", "desc": "Everyday assistance with personal grooming, mobility, feeding, medication reminders, and companionship."},
+    {"name": "Home nurse services", "slug": "home-nurse-services", "icon": "👩‍⚕️", "badge": "Home Nursing", "img": "service-home-nurse.svg", "desc": "Qualified visiting or shift-based nurses for clinical procedures, injections, wound care, and recovery."},
+    {"name": "Nursing Services", "slug": "nursing-services", "icon": "💉", "badge": "Clinical Procedures", "img": "service-nursing.svg", "desc": "Clinical nursing at home under medical prescription: IV infusions, sterile wound dressings, and catheter care."}
+]
+
 def write_file(rel_path, content):
     full = os.path.join(ROOT_DIR, rel_path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
@@ -12,7 +35,7 @@ def write_file(rel_path, content):
     print(f"Generated: {rel_path}")
 
 # ---------------------------------------------------------------------------
-# 1. ABOUT US PAGE (/about-us/index.html)
+# 1. ABOUT US PAGE
 # ---------------------------------------------------------------------------
 def generate_about_page():
     header = get_header("/about-us/", depth=1)
@@ -24,8 +47,8 @@ def generate_about_page():
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Sugam Home Care Services Chennai</title>
-  <meta name="description" content="Learn about Sugam Home Care Services in Chennai. Our mission, values, and commitment to compassionate, reliable home care, elder care, and patient care.">
+  <title>About Us | Sugam Home Care Services Chennai &amp; Tamil Nadu</title>
+  <meta name="description" content="Learn about Sugam Home Care Services. Our mission, values, and commitment to compassionate, reliable home care, senior care, bedridden care, and nursing across Chennai and Tamil Nadu.">
   <link rel="canonical" href="https://sugamhomecareservices.in/about-us/">
   <link rel="icon" type="image/svg+xml" href="{rel}assets/images/favicon.svg">
   <link rel="stylesheet" href="{rel}assets/css/style.css">
@@ -46,12 +69,12 @@ def generate_about_page():
       </nav>
 
       <div class="section-header text-left" style="max-width: 800px; margin-bottom: 1.5rem;">
-        <span class="badge-tag">Our Story & Mission</span>
+        <span class="badge-tag">Our Story &amp; Mission</span>
         <h1 style="font-size: clamp(2.2rem, 3.5vw, 3rem); margin-bottom: 1rem;">
-          Compassionate Care for Chennai Families in the Comfort of Home
+          Compassionate Care for Families Across Chennai &amp; Tamil Nadu
         </h1>
         <p class="lead" style="color: var(--text-muted); font-size: 1.15rem;">
-          Sugam Home Care Services was founded with a straightforward purpose: to provide families with dependable, respectful, and compassionate care assistance for their loved ones right at home.
+          Sugam Home Care Services was founded with a straightforward purpose: to provide families with dependable, respectful, and compassionate care assistance for elderly parents, recovering patients, and infants in the comfort of home.
         </p>
       </div>
     </div>
@@ -69,8 +92,8 @@ def generate_about_page():
       <div class="benefits-grid">
         <div class="benefit-item">
           <div class="benefit-number">01</div>
-          <h3>Dignity & Respect</h3>
-          <p>Whether assisting an elderly grandparent, a recovering patient, or an infant, we treat every individual with warmth, honor, and deep respect.</p>
+          <h3>Dignity &amp; Respect</h3>
+          <p>Whether assisting an elderly grandparent, a bedridden patient, or a newborn baby, we treat every individual with warmth, honor, and deep respect.</p>
         </div>
 
         <div class="benefit-item">
@@ -87,57 +110,20 @@ def generate_about_page():
 
         <div class="benefit-item">
           <div class="benefit-number">04</div>
-          <h3>Safety & Reliability</h3>
+          <h3>Safety &amp; Reliability</h3>
           <p>We verify identities, understand previous care background, and ensure caregivers are attentive, clean, and dedicated to their duties.</p>
         </div>
 
         <div class="benefit-item">
           <div class="benefit-number">05</div>
-          <h3>Chennai Rooted</h3>
-          <p>Headquartered in New Perungalathur, we understand the specific neighborhood requirements and linguistic preferences across Greater Chennai.</p>
+          <h3>Chennai &amp; Tamil Nadu Reach</h3>
+          <p>Headquartered in New Perungalathur, serving 35+ Chennai localities and providing 24-Hour full-day care across all districts of Tamil Nadu.</p>
         </div>
 
         <div class="benefit-item">
           <div class="benefit-number">06</div>
           <h3>Clear Care Boundaries</h3>
-          <p>We clearly delineate non-medical domestic and caregiving help from clinical nursing, ensuring patients receive the appropriate level of care safely.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How We Match Caregivers -->
-  <section class="section section-bg-surface">
-    <div class="container">
-      <div class="section-header">
-        <span class="badge-tag">Our Careful Process</span>
-        <h2>How We Coordinate Care for Your Loved One</h2>
-        <p class="section-subtitle">A thoughtful, personalized approach to matching the right caregiver with your household.</p>
-      </div>
-
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-badge">1</div>
-          <h3>Requirement Assessment</h3>
-          <p>We listen to your loved one’s daily routine, medical history, mobility needs, and your family’s preferred timings.</p>
-        </div>
-
-        <div class="step-card">
-          <div class="step-badge">2</div>
-          <h3>Caregiver Selection</h3>
-          <p>We identify caregivers whose temperament, experience, language skills, and availability align with your home.</p>
-        </div>
-
-        <div class="step-card">
-          <div class="step-badge">3</div>
-          <h3>Household Orientation</h3>
-          <p>The caregiver is introduced to your home, daily tasks are reviewed, and comfort between the client and caregiver is established.</p>
-        </div>
-
-        <div class="step-card">
-          <div class="step-badge">4</div>
-          <h3>Continuous Support</h3>
-          <p>We remain available to receive your feedback, address scheduling adjustments, and ensure smooth care continuity.</p>
+          <p>We clearly delineate non-medical caregiving help from clinical nursing, ensuring patients receive the appropriate level of medical oversight safely.</p>
         </div>
       </div>
     </div>
@@ -166,20 +152,24 @@ def generate_about_page():
     write_file("about-us/index.html", html)
 
 # ---------------------------------------------------------------------------
-# 2. CONTACT US PAGE (/contact-us/index.html)
+# 2. CONTACT US PAGE
 # ---------------------------------------------------------------------------
 def generate_contact_page():
     header = get_header("/contact-us/", depth=1)
     footer = get_footer(depth=1)
     rel = "../"
 
+    loc_pills = ""
+    for loc in LOCATIONS:
+        loc_pills += f'<span class="area-pill">{loc}</span>\n                '
+
     html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | Sugam Home Care Services Chennai</title>
-  <meta name="description" content="Contact Sugam Home Care Services in New Perungalathur, Chennai. Call, WhatsApp, or submit an enquiry for home care, maid, elderly, or nursing services.">
+  <title>Contact Us | Sugam Home Care Services Chennai &amp; Tamil Nadu</title>
+  <meta name="description" content="Contact Sugam Home Care Services. Call +91 84388 61636 or WhatsApp for home care, senior care, bedridden patient care, and nursing across Chennai and Tamil Nadu.">
   <link rel="canonical" href="https://sugamhomecareservices.in/contact-us/">
   <link rel="icon" type="image/svg+xml" href="{rel}assets/images/favicon.svg">
   <link rel="stylesheet" href="{rel}assets/css/style.css">
@@ -266,27 +256,29 @@ def generate_contact_page():
             </div>
           </div>
 
-          <div class="contact-info-item">
+          <!-- All Over Tamil Nadu Notice -->
+          <div style="background: linear-gradient(135deg, #0F2C59 0%, #163E7D 100%); color: #FFFFFF; border-radius: var(--radius-md); padding: 1.25rem;">
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.35rem;">
+              <span style="font-size:1.25rem;">🚩</span>
+              <strong style="color:#2DD4BF; font-size:1rem;">All Over Tamil Nadu Service Availability:</strong>
+            </div>
+            <p style="color:#E2E8F0; font-size:0.85rem; line-height:1.5; margin-bottom:0;">
+              Outside our primary Chennai locations, home care services across Tamil Nadu are provided on a <strong>One-Day Full (24-Hour)</strong> basis.
+            </p>
+          </div>
+
+          <div class="contact-info-item" style="margin-top: 0.5rem;">
             <div class="contact-icon-wrapper">🗺️</div>
             <div class="contact-info-content">
-              <h4>Chennai Service Coverage</h4>
+              <h4>Primary Chennai Coverage Areas</h4>
               <div class="service-areas-pills">
-                <span class="area-pill">New Perungalathur</span>
-                <span class="area-pill">Perungalathur</span>
-                <span class="area-pill">Tambaram</span>
-                <span class="area-pill">Chromepet</span>
-                <span class="area-pill">Pallavaram</span>
-                <span class="area-pill">Vandalur</span>
-                <span class="area-pill">Guduvanchery</span>
-                <span class="area-pill">Medavakkam</span>
-                <span class="area-pill">Velachery</span>
-                <span class="area-pill">Greater Chennai</span>
+                {loc_pills}
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Right: Contact Form -->
+        <!-- Right: Contact Form (11 Services) -->
         <div class="enquiry-card">
           <div class="enquiry-card-header">
             <span class="badge-tag">Direct Enquiry</span>
@@ -309,13 +301,17 @@ def generate_contact_page():
               <label class="form-label">Service Required <span class="required">*</span></label>
               <select name="service" class="form-control form-select" required>
                 <option value="">Select a Home Care Service</option>
-                <option value="Maid Services">Maid Services</option>
-                <option value="Home Health Care Services">Home Health Care Services</option>
-                <option value="Caretaker Services">Caretaker Services</option>
-                <option value="Baby Care Taker">Baby Care Taker</option>
-                <option value="Elderly Care Services">Elderly Care Services</option>
-                <option value="Patient Care Services">Patient Care Services</option>
-                <option value="Nursing Services at Home">Nursing Services at Home</option>
+                <option value="Baby care services">Baby care services</option>
+                <option value="Elderly care services">Elderly care services</option>
+                <option value="Patient care services">Patient care services</option>
+                <option value="Senior citizen care services">Senior citizen care services</option>
+                <option value="Bedridden patient care services">Bedridden patient care services</option>
+                <option value="Home health care for seniors">Home health care for seniors</option>
+                <option value="Dementia care for the elderly">Dementia care for the elderly</option>
+                <option value="Home care for cancer patients">Home care for cancer patients</option>
+                <option value="Caretaker services at home">Caretaker services at home</option>
+                <option value="Home nurse services">Home nurse services</option>
+                <option value="Nursing Services">Nursing Services</option>
               </select>
             </div>
 
@@ -374,25 +370,15 @@ def generate_contact_page():
     write_file("contact-us/index.html", html)
 
 # ---------------------------------------------------------------------------
-# 3. ALL SERVICES DIRECTORY (/services/index.html)
+# 3. ALL SERVICES DIRECTORY (11 Services)
 # ---------------------------------------------------------------------------
 def generate_services_directory():
     header = get_header("/services/", depth=1)
     footer = get_footer(depth=1)
     rel = "../"
 
-    services_cards = [
-        {"name": "Maid Services", "slug": "maid-services", "icon": "🧹", "badge": "Household Assistance", "img": "service-maid.svg", "desc": "Reliable daily sweeping, mopping, kitchen dishwashing, and tidying for a sparkling home."},
-        {"name": "Home Health Care Services", "slug": "home-health-care-services", "icon": "🩺", "badge": "Health Monitoring", "img": "service-home-health.svg", "desc": "Structured vitals monitoring (BP, sugar, pulse), medication supervision, and convalescence support."},
-        {"name": "Caretaker Services", "slug": "caretaker-services", "icon": "🤝", "badge": "Everyday Living", "img": "service-caretaker.svg", "desc": "Attentive everyday assistance with daily routines, mobility, feeding, hygiene, and companionship."},
-        {"name": "Baby Care Taker", "slug": "baby-care-taker", "icon": "👶", "badge": "Mother & Child", "img": "service-baby-care.svg", "desc": "Loving, experienced care for newborns and infants: massage, warm bath, feeding, and resting support for mothers."},
-        {"name": "Elderly Care Services", "slug": "elderly-care-services", "icon": "🧓", "badge": "Senior Well-Being", "img": "service-elderly-care.svg", "desc": "Dignified, warm care empowering senior parents with fall prevention, mobility, hygiene, and companionship."},
-        {"name": "Patient Care Services", "slug": "patient-care-services", "icon": "🛏️", "badge": "Bedside Recovery", "img": "service-patient-care.svg", "desc": "Attentive bedside support for bedridden or post-surgical recovery, bedsore prevention, and hygiene."},
-        {"name": "Nursing Services at Home", "slug": "nursing-services-at-home", "icon": "👩‍⚕️", "badge": "Clinical Procedures", "img": "service-nursing.svg", "desc": "Qualified home nursing for prescribed injections, sterile wound dressing, IV fluids, and catheter care."}
-    ]
-
     cards_html = ""
-    for s in services_cards:
+    for s in SERVICES_DIRECTORY:
         cards_html += f'''
         <article class="service-card">
           <div class="service-card-media">
@@ -410,16 +396,15 @@ def generate_services_directory():
               <button type="button" class="btn btn-primary btn-open-modal" data-service="{s["name"]}">Enquire</button>
             </div>
           </div>
-        </article>
-        '''
+        </article>'''
 
     html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Home Care Services | Sugam Home Care Services Chennai</title>
-  <meta name="description" content="Explore all home care services provided by Sugam Home Care Services in Chennai: Maid, Home Health Care, Caretaker, Baby Care, Elderly Care, Patient Care, and Nursing.">
+  <title>All Home Care Services | Sugam Home Care Services Chennai &amp; Tamil Nadu</title>
+  <meta name="description" content="Explore all 11 home care services provided by Sugam Home Care Services: Baby Care, Elderly Care, Patient Care, Senior Citizen Care, Bedridden Care, Dementia Care, Cancer Care, and Nursing.">
   <link rel="canonical" href="https://sugamhomecareservices.in/services/">
   <link rel="icon" type="image/svg+xml" href="{rel}assets/images/favicon.svg">
   <link rel="stylesheet" href="{rel}assets/css/style.css">
@@ -441,51 +426,20 @@ def generate_services_directory():
       <div class="section-header text-left" style="max-width: 800px; margin-bottom: 1.5rem;">
         <span class="badge-tag">Comprehensive Care Directory</span>
         <h1 style="font-size: clamp(2.2rem, 3.5vw, 3rem); margin-bottom: 1rem;">
-          Our Home Care Services in Chennai
+          Our 11 Home Care Services
         </h1>
         <p class="lead" style="color: var(--text-muted); font-size: 1.15rem;">
-          From daily household chores to clinical nursing at your bedside, discover dedicated care tailored to every stage of family life.
+          Specialized, compassionate care across Chennai and all over Tamil Nadu. Designed for senior citizens, bedridden individuals, cancer recovery, dementia support, and clinical nursing.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Service Cards Grid -->
+  <!-- Service Cards Grid (11 Services) -->
   <section class="section">
     <div class="container">
       <div class="services-grid">
         {cards_html}
-      </div>
-    </div>
-  </section>
-
-  <!-- How to Choose the Right Service -->
-  <section class="section section-bg-surface">
-    <div class="container">
-      <div class="section-header">
-        <span class="badge-tag">Service Selection Guide</span>
-        <h2>Which Service Fits Your Family's Needs?</h2>
-        <p class="section-subtitle">A quick comparison to help you choose the right level of support.</p>
-      </div>
-
-      <div class="highlights-grid">
-        <div class="highlight-box">
-          <div class="highlight-icon">🧹</div>
-          <h3>Household Help</h3>
-          <p><strong>Maid Services:</strong> Best when you need hands for daily floor cleaning, kitchen dishes, and organizing without personal care duties.</p>
-        </div>
-
-        <div class="highlight-box teal-accent">
-          <div class="highlight-icon">🤝</div>
-          <h3>Personal Caregiving</h3>
-          <p><strong>Caretaker / Elderly Care:</strong> Best for elders or recovering family members needing daily physical mobility, feeding, hygiene, and companionship.</p>
-        </div>
-
-        <div class="highlight-box amber-accent">
-          <div class="highlight-icon">👩‍⚕️</div>
-          <h3>Clinical Nursing</h3>
-          <p><strong>Nursing Services at Home:</strong> Best when a doctor has prescribed specific medical procedures such as injections, IV fluids, or sterile wound dressings.</p>
-        </div>
       </div>
     </div>
   </section>
@@ -513,7 +467,7 @@ def generate_services_directory():
     write_file("services/index.html", html)
 
 # ---------------------------------------------------------------------------
-# 4. PRIVACY POLICY PAGE (/privacy-policy/index.html)
+# 4. PRIVACY POLICY PAGE
 # ---------------------------------------------------------------------------
 def generate_privacy_page():
     header = get_header("/privacy-policy/", depth=1)
@@ -545,7 +499,7 @@ def generate_privacy_page():
         <span>Privacy Policy</span>
       </nav>
       <div class="section-header text-left" style="max-width: 800px; margin-bottom: 0;">
-        <span class="badge-tag">Legal & Data Protection</span>
+        <span class="badge-tag">Legal &amp; Data Protection</span>
         <h1>Privacy Policy</h1>
         <p class="section-subtitle">Last Updated: October 2026</p>
       </div>
@@ -563,9 +517,9 @@ def generate_privacy_page():
         <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: var(--text-muted);">
           <li>Full Name</li>
           <li>Phone Number and WhatsApp contact details</li>
-          <li>Service required (e.g. Maid Services, Elderly Care, Nursing at Home)</li>
+          <li>Service required (e.g. Elderly Care, Patient Care, Bedridden Care, Nursing Services)</li>
           <li>Preferred contact timings and specific care requirements</li>
-          <li>Locality or address in Chennai for assessing service availability</li>
+          <li>Locality in Chennai or district in Tamil Nadu for assessing staff availability</li>
           <li>Standard web analytics data (such as IP address, browser type, and Google Ads referral parameters).</li>
         </ul>
 
@@ -573,7 +527,7 @@ def generate_privacy_page():
         <p>The information you submit is used solely for the following legitimate business purposes:</p>
         <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: var(--text-muted);">
           <li>To respond to your service enquiry and arrange telephone consultations.</li>
-          <li>To coordinate care requirements and assess staff availability in your Chennai locality.</li>
+          <li>To coordinate care requirements and assess staff availability in your locality.</li>
           <li>To follow up on requested service arrangements and maintain service records.</li>
           <li>We <strong>do not sell, rent, or trade</strong> your personal contact details to any third-party marketing companies.</li>
         </ul>
@@ -602,7 +556,7 @@ def generate_privacy_page():
     write_file("privacy-policy/index.html", html)
 
 # ---------------------------------------------------------------------------
-# 5. TERMS AND CONDITIONS (/terms-and-conditions/index.html)
+# 5. TERMS AND CONDITIONS PAGE
 # ---------------------------------------------------------------------------
 def generate_terms_page():
     header = get_header("/terms-and-conditions/", depth=1)
@@ -648,18 +602,18 @@ def generate_terms_page():
         <p>By using the website of Sugam Home Care Services (https://sugamhomecareservices.in/) or engaging our home care coordination services, you agree to comply with and be bound by these Terms and Conditions.</p>
 
         <h3 style="color: var(--color-primary); margin-top: 2rem;">2. Scope of Services</h3>
-        <p>Sugam Home Care Services coordinates home-based assistance including maid services, caretaker support, baby care, elderly care, patient care, and qualified home nursing. Submitting an enquiry via website, phone, or WhatsApp does not constitute a guaranteed binding contract until service terms, hours, charges, and caregiver availability are mutually confirmed.</p>
+        <p>Sugam Home Care Services coordinates home-based assistance including baby care, elderly care, patient care, senior citizen support, bedridden care, dementia care, cancer home care, and qualified nursing. Submitting an enquiry does not constitute a guaranteed binding contract until service terms, hours, charges, and caregiver availability are mutually confirmed.</p>
 
-        <h3 style="color: var(--color-primary); margin-top: 2rem;">3. Clinical Nursing & Prescription Requirement</h3>
+        <h3 style="color: var(--color-primary); margin-top: 2rem;">3. Service Locations Policy</h3>
+        <p>Primary services are available across 35+ designated localities in Chennai on part-time, 12-hour, or 24-hour shifts. Outside primary Chennai coverage areas across Tamil Nadu, services are provided exclusively on a One-Day Full (24-Hour) basis.</p>
+
+        <h3 style="color: var(--color-primary); margin-top: 2rem;">4. Clinical Nursing &amp; Prescription Requirement</h3>
         <p>Clinical procedures (including injections, IV fluids, wound dressing, and catheterization) require a valid, signed prescription from a registered medical practitioner. Sugam Home Care Services does not provide independent medical diagnosis or prescribe pharmaceutical drugs.</p>
 
-        <h3 style="color: var(--color-primary); margin-top: 2rem;">4. Emergency Medical Disclaimer</h3>
+        <h3 style="color: var(--color-primary); margin-top: 2rem;">5. Emergency Medical Disclaimer</h3>
         <p>Sugam Home Care Services is <strong>not an emergency medical service</strong>. In the event of acute respiratory distress, cardiac symptoms, severe trauma, or life-threatening emergencies, clients must contact 108 or proceed immediately to the nearest emergency hospital.</p>
 
-        <h3 style="color: var(--color-primary); margin-top: 2rem;">5. Safe & Respectful Working Environment</h3>
-        <p>Clients are expected to maintain a safe, hygienic, and respectful working environment for caregivers. Any form of harassment or unsafe conditions will result in immediate termination of service.</p>
-
-        <h3 style="color: var(--color-primary); margin-top: 2rem;">6. Governing Law & Jurisdiction</h3>
+        <h3 style="color: var(--color-primary); margin-top: 2rem;">6. Governing Law &amp; Jurisdiction</h3>
         <p>These Terms shall be governed by and construed in accordance with the laws of India, and any disputes shall be subject to the exclusive jurisdiction of the competent courts in Chennai, Tamil Nadu.</p>
       </div>
     </div>
@@ -674,7 +628,7 @@ def generate_terms_page():
     write_file("terms-and-conditions/index.html", html)
 
 # ---------------------------------------------------------------------------
-# 6. THANK YOU / CONVERSION PAGE (/thank-you/index.html)
+# 6. THANK YOU PAGE
 # ---------------------------------------------------------------------------
 def generate_thank_you_page():
     header = get_header("/thank-you/", depth=1)
@@ -694,10 +648,8 @@ def generate_thank_you_page():
   <link rel="stylesheet" href="{rel}assets/css/style.css">
   <link rel="stylesheet" href="{rel}assets/css/components.css">
 
-  <!-- Google Ads Conversion Tracking Snippet (Triggered on Thank You) -->
   <script>
     window.addEventListener('DOMContentLoaded', () => {{
-      // Retrieve lead info from sessionStorage if available
       try {{
         const lead = JSON.parse(sessionStorage.getItem('sugam_latest_lead'));
         if (lead) {{
@@ -718,7 +670,6 @@ def generate_thank_you_page():
 <main>
   <section class="section" style="padding: 5rem 0; min-height: 70vh; display: flex; align-items: center;">
     <div class="container-narrow" style="text-align: center;">
-      <!-- Success Icon -->
       <div style="width: 80px; height: 80px; border-radius: 50%; background-color: #ECFDF5; color: #059669; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; box-shadow: 0 4px 14px rgba(5, 150, 105, 0.2);">
         <svg style="width: 44px; height: 44px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="20 6 9 17 4 12"></polyline>
@@ -731,7 +682,7 @@ def generate_thank_you_page():
       </h1>
       
       <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.6; max-width: 600px; margin: 0 auto 1.5rem auto;">
-        We have received your home care enquiry. Our care coordinator will review your requirements and call you back during our regular consultation hours.
+        We have received your home care enquiry. Our care coordinator will review your requirements and call you back during our consultation hours.
       </p>
 
       <div id="lead-summary-notice" style="display: none; background-color: var(--bg-surface); border: 1px solid var(--border-light); padding: 0.85rem 1.25rem; border-radius: var(--radius-md); font-size: 0.9rem; color: var(--color-primary); margin: 0 auto 2rem auto; max-width: 500px;"></div>
@@ -742,7 +693,7 @@ def generate_thank_you_page():
         <div style="display: flex; flex-direction: column; gap: 0.85rem;">
           <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
             <span style="background-color: var(--color-primary); color: #FFF; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; flex-shrink: 0;">1</span>
-            <span style="font-size: 0.95rem; color: var(--text-main);"><strong>Requirement Review:</strong> Our care team reviews your requested service, shift hours, and Chennai locality.</span>
+            <span style="font-size: 0.95rem; color: var(--text-main);"><strong>Requirement Review:</strong> Our care team reviews your requested service, shift hours, and locality.</span>
           </div>
           <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
             <span style="background-color: var(--color-primary); color: #FFF; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; flex-shrink: 0;">2</span>
@@ -788,21 +739,25 @@ def generate_sitemap_and_robots():
         "https://sugamhomecareservices.in/about-us/",
         "https://sugamhomecareservices.in/contact-us/",
         "https://sugamhomecareservices.in/services/",
-        "https://sugamhomecareservices.in/maid-services/",
-        "https://sugamhomecareservices.in/home-health-care-services/",
-        "https://sugamhomecareservices.in/caretaker-services/",
-        "https://sugamhomecareservices.in/baby-care-taker/",
+        "https://sugamhomecareservices.in/baby-care-services/",
         "https://sugamhomecareservices.in/elderly-care-services/",
         "https://sugamhomecareservices.in/patient-care-services/",
-        "https://sugamhomecareservices.in/nursing-services-at-home/",
+        "https://sugamhomecareservices.in/senior-citizen-care-services/",
+        "https://sugamhomecareservices.in/bedridden-patient-care-services/",
+        "https://sugamhomecareservices.in/home-health-care-for-seniors/",
+        "https://sugamhomecareservices.in/dementia-care-for-the-elderly/",
+        "https://sugamhomecareservices.in/home-care-for-cancer-patients/",
+        "https://sugamhomecareservices.in/caretaker-services-at-home/",
+        "https://sugamhomecareservices.in/home-nurse-services/",
+        "https://sugamhomecareservices.in/nursing-services/",
         "https://sugamhomecareservices.in/privacy-policy/",
         "https://sugamhomecareservices.in/terms-and-conditions/"
     ]
     
     sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u in urls:
-        priority = "1.0" if u.endswith(".in/") else ("0.9" if "services/" in u or u.endswith("-services/") or "baby-care" in u or "nursing" in u else "0.8")
-        sitemap.append(f'  <url>\n    <loc>{u}</loc>\n    <lastmod>2026-10-22</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>{priority}</priority>\n  </url>')
+        priority = "1.0" if u.endswith(".in/") else ("0.9" if "services" in u or "care" in u or "nurse" in u else "0.8")
+        sitemap.append(f'  <url>\n    <loc>{u}</loc>\n    <lastmod>2026-10-26</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>{priority}</priority>\n  </url>')
     sitemap.append('</urlset>')
 
     write_file("sitemap.xml", "\n".join(sitemap))
@@ -815,13 +770,12 @@ Sitemap: https://sugamhomecareservices.in/sitemap.xml
 '''
     write_file("robots.txt", robots)
 
-# Run all generators
-generate_about_page()
-generate_contact_page()
-generate_services_directory()
-generate_privacy_page()
-generate_terms_page()
-generate_thank_you_page()
-generate_sitemap_and_robots()
-
-print("All additional pages, sitemap, and robots.txt built successfully!")
+if __name__ == "__main__":
+    generate_about_page()
+    generate_contact_page()
+    generate_services_directory()
+    generate_privacy_page()
+    generate_terms_page()
+    generate_thank_you_page()
+    generate_sitemap_and_robots()
+    print("All other pages generated successfully!")

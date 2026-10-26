@@ -33,78 +33,139 @@ const SITE_CONFIG = {
     full: "No. 123/12, Kattabomman Street, Kamaraj Nagar, New Perungalathur, Chennai – 600063, Tamil Nadu, India."
   },
   
-  // Primary Service Areas in Chennai
+  // Primary Service Locations
   serviceAreas: [
-    "New Perungalathur",
-    "Perungalathur",
     "Tambaram",
-    "Chromepet",
-    "Pallavaram",
     "Vandalur",
     "Guduvanchery",
-    "Medavakkam",
+    "Sholinganallur",
+    "Navalur",
+    "OMR",
+    "ECR",
+    "Adyar",
     "Velachery",
-    "Greater Chennai"
+    "Nanganallur",
+    "Madipakkam",
+    "Pallavaram",
+    "Chromepet",
+    "Alandur",
+    "Guindy",
+    "Adambakkam",
+    "Taramani",
+    "Nungambakkam",
+    "Kodambakkam",
+    "Chetpet",
+    "Egmore",
+    "Thousand Lights",
+    "Royapettah",
+    "Anna Nagar",
+    "Mogappair",
+    "Ambattur",
+    "Avadi",
+    "Porur",
+    "Iyyappanthangal",
+    "Ayanavaram",
+    "Royapuram",
+    "Purasawalkam",
+    "Panaiyur",
+    "Thoraipakkam",
+    "Perungudi",
+    "T. Nagar",
+    "Ashok Nagar"
   ],
+
+  // All Over Tamil Nadu Service Policy
+  allTamilNaduPolicy: {
+    coverage: "All Over Tamil Nadu",
+    terms: "Service available across Tamil Nadu. For locations outside our primary Chennai coverage, service is provided on a One-Day Full (24-Hour) basis."
+  },
   
-  // 7 Individual Services
+  // Exactly 11 Approved Services
   services: [
     {
-      id: "maid-services",
-      name: "Maid Services",
-      slug: "/maid-services/",
-      shortDesc: "Reliable household assistance including daily sweeping, mopping, kitchen cleaning, dishwashing, and tidying.",
-      icon: "🧹"
-    },
-    {
-      id: "home-health-care-services",
-      name: "Home Health Care Services",
-      slug: "/home-health-care-services/",
-      shortDesc: "Personalized home healthcare support, vitals monitoring, routine health tracking, and post-hospital recovery assistance.",
-      icon: "🩺"
-    },
-    {
-      id: "caretaker-services",
-      name: "Caretaker Services",
-      slug: "/caretaker-services/",
-      shortDesc: "Attentive everyday assistance with mobility, feeding, hygiene, medication reminders, and reassuring companionship.",
-      icon: "🤝"
-    },
-    {
-      id: "baby-care-taker",
-      name: "Baby Care Taker",
-      slug: "/baby-care-taker/",
-      shortDesc: "Tender, dependable infant care support, feeding assistance, diaper changing, baby massage, and newborn assistance.",
+      id: "baby-care-services",
+      name: "Baby care services",
+      slug: "/baby-care-services/",
+      shortDesc: "Tender infant care, newborn massage, warm bath assistance, bottle feeding, and restful recovery support for new mothers.",
       icon: "👶"
     },
     {
       id: "elderly-care-services",
-      name: "Elderly Care Services",
+      name: "Elderly care services",
       slug: "/elderly-care-services/",
-      shortDesc: "Dignified, compassionate care for seniors, helping with daily routines, mobility, emotional well-being, and companionship.",
+      shortDesc: "Dignified, warm senior care supporting daily routines, walking assistance, fall prevention, personal hygiene, and loving companionship.",
       icon: "🧓"
     },
     {
       id: "patient-care-services",
-      name: "Patient Care Services",
+      name: "Patient care services",
       slug: "/patient-care-services/",
-      shortDesc: "Dedicated bedside support for bedridden or recovering patients, hygiene maintenance, and comfortable home care.",
+      shortDesc: "Dedicated bedside support for recovering patients, mobility assistance, sponge bathing, feeding, and personal hygiene upkeep at home.",
       icon: "🛏️"
     },
     {
-      id: "nursing-services-at-home",
-      name: "Nursing Services at Home",
-      slug: "/nursing-services-at-home/",
-      shortDesc: "Qualified home nursing assistance for clinical procedures, injections, wound dressing, catheter care, and post-op care.",
+      id: "senior-citizen-care-services",
+      name: "Senior citizen care services",
+      slug: "/senior-citizen-care-services/",
+      shortDesc: "Comprehensive senior citizen support promoting healthy daily routines, medication reminders, meal assistance, and empathetic presence.",
+      icon: "👴"
+    },
+    {
+      id: "bedridden-patient-care-services",
+      name: "Bedridden patient care services",
+      slug: "/bedridden-patient-care-services/",
+      shortDesc: "Specialized bed care: 2-hour body repositioning, bedsore prevention, bed bathing, adult diaper hygiene, and gentle feeding.",
+      icon: "🛌"
+    },
+    {
+      id: "home-health-care-for-seniors",
+      name: "Home health care for seniors",
+      slug: "/home-health-care-for-seniors/",
+      shortDesc: "Structured health monitoring for elders: blood pressure, sugar, pulse tracking, medication adherence, and doctor coordination.",
+      icon: "🩺"
+    },
+    {
+      id: "dementia-care-for-the-elderly",
+      name: "Dementia care for the elderly",
+      slug: "/dementia-care-for-the-elderly/",
+      shortDesc: "Specialized cognitive support, calm daily routines, reassurance, and continuous safety oversight for seniors with Alzheimer's and memory loss.",
+      icon: "🧠"
+    },
+    {
+      id: "home-care-for-cancer-patients",
+      name: "Home care for cancer patients",
+      slug: "/home-care-for-cancer-patients/",
+      shortDesc: "Compassionate oncology support: post-chemotherapy recovery assistance, comfort positioning, nutrition tracking, and palliative care.",
+      icon: "🎗️"
+    },
+    {
+      id: "caretaker-services-at-home",
+      name: "Caretaker services at home",
+      slug: "/caretaker-services-at-home/",
+      shortDesc: "Attentive everyday assistance with bathing, dressing, meal feeding, medication reminders, and comforting companion care.",
+      icon: "🤝"
+    },
+    {
+      id: "home-nurse-services",
+      name: "Home nurse services",
+      slug: "/home-nurse-services/",
+      shortDesc: "Qualified visiting or shift-based nurses for clinical procedures, injections, wound dressings, IV therapy, and recovery supervision.",
       icon: "👩‍⚕️"
+    },
+    {
+      id: "nursing-services",
+      name: "Nursing Services",
+      slug: "/nursing-services/",
+      shortDesc: "Clinical nursing at home under medical prescription: sterile dressing, IV line care, catheterization, Ryle's tube, and post-op care.",
+      icon: "💉"
     }
   ],
   
-  // Google Ads Tracking Configuration (Set these when launching your Google Ads campaign)
+  // Google Ads Tracking Configuration
   googleAds: {
     conversionId: "AW-CONVERSION_ID_PLACEHOLDER",
     conversionLabel: "CONVERSION_LABEL_PLACEHOLDER",
-    enabled: false // Set to true once Google Ads IDs are added
+    enabled: false
   }
 };
 

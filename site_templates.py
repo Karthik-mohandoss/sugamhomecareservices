@@ -1,23 +1,46 @@
 #!/usr/bin/env python3
 """
-Sugam Home Care Services - Site Generator
-Generates all 14 pages with semantic HTML5, Schema.org structured data,
-high-converting mobile-first layouts, and accessible components.
+Sugam Home Care Services - Site Generator Templates
+Provides consistent Header, Navigation, Footer, Mobile Bar, and Callback Modal.
 """
 
 import os
 
 ROOT_DIR = "/Users/karthik/.gemini/antigravity/scratch/sugam-home-care"
 
-# Shared Navigation and Footer Builders
+# 11 Approved Services
+SERVICES_NAV = [
+    {"name": "Baby care services", "slug": "baby-care-services", "icon": "👶"},
+    {"name": "Elderly care services", "slug": "elderly-care-services", "icon": "🧓"},
+    {"name": "Patient care services", "slug": "patient-care-services", "icon": "🛏️"},
+    {"name": "Senior citizen care services", "slug": "senior-citizen-care-services", "icon": "👴"},
+    {"name": "Bedridden patient care services", "slug": "bedridden-patient-care-services", "icon": "🛌"},
+    {"name": "Home health care for seniors", "slug": "home-health-care-for-seniors", "icon": "🩺"},
+    {"name": "Dementia care for the elderly", "slug": "dementia-care-for-the-elderly", "icon": "🧠"},
+    {"name": "Home care for cancer patients", "slug": "home-care-for-cancer-patients", "icon": "🎗️"},
+    {"name": "Caretaker services at home", "slug": "caretaker-services-at-home", "icon": "🤝"},
+    {"name": "Home nurse services", "slug": "home-nurse-services", "icon": "👩‍⚕️"},
+    {"name": "Nursing Services", "slug": "nursing-services", "icon": "💉"}
+]
+
 def get_header(current_path, depth=0):
     rel = "./" if depth == 0 else "../"
     
-    # Active class helpers
     is_home = (current_path == "/")
     is_about = (current_path == "/about-us/")
-    is_services = ("/services" in current_path or current_path.endswith("-services/") or "baby-care" in current_path or "nursing" in current_path)
+    is_services = ("/services" in current_path or current_path.endswith("-services/") or "care" in current_path or "nurse" in current_path)
     is_contact = (current_path == "/contact-us/")
+
+    # Build dropdown items
+    desktop_dropdown = ""
+    mobile_submenu = ""
+    for s in SERVICES_NAV:
+        desktop_dropdown += f'''
+          <a href="{rel}{s["slug"]}/" class="dropdown-item" role="menuitem">
+            <span class="dropdown-item-icon">{s["icon"]}</span> {s["name"]}
+          </a>'''
+        mobile_submenu += f'''
+          <a href="{rel}{s["slug"]}/" class="mobile-sub-link">{s["icon"]} {s["name"]}</a>'''
     
     return f'''<!-- Topbar for Quick Contact & Reassurance -->
 <div class="header-topbar">
@@ -25,9 +48,9 @@ def get_header(current_path, depth=0):
     <div class="topbar-left">
       <span class="topbar-item">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-        New Perungalathur, Chennai – 600063
+        Chennai &amp; All Over Tamil Nadu
       </span>
-      <span class="topbar-badge">Trusted Home Care in Chennai</span>
+      <span class="topbar-badge">Trusted Home Care in Chennai • 24-Hr Service Across Tamil Nadu</span>
     </div>
     <div class="topbar-right">
       <a href="tel:+918438861636" data-config="phoneTel" class="topbar-item">
@@ -55,34 +78,14 @@ def get_header(current_path, depth=0):
       <a href="{rel}" class="nav-link {'active' if is_home else ''}">Home</a>
       <a href="{rel}about-us/" class="nav-link {'active' if is_about else ''}">About Us</a>
       
-      <!-- Services Dropdown -->
+      <!-- Services Dropdown (11 Services) -->
       <div class="nav-dropdown">
         <a href="{rel}services/" class="nav-link nav-dropdown-toggle {'active' if is_services else ''}" aria-haspopup="true" aria-expanded="false">
           Services
           <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"></path></svg>
         </a>
-        <div class="nav-dropdown-menu" role="menu">
-          <a href="{rel}maid-services/" class="dropdown-item" role="menuitem">
-            <span class="dropdown-item-icon">🧹</span> Maid Services
-          </a>
-          <a href="{rel}home-health-care-services/" class="dropdown-item" role="menuitem">
-            <span class="dropdown-item-icon">🩺</span> Home Health Care Services
-          </a>
-          <a href="{rel}caretaker-services/" class="dropdown-item" role="menuitem">
-            <span class="dropdown-item-icon">🤝</span> Caretaker Services
-          </a>
-          <a href="{rel}baby-care-taker/" class="dropdown-item" role="menuitem">
-            <span class="dropdown-item-icon">👶</span> Baby Care Taker
-          </a>
-          <a href="{rel}elderly-care-services/" class="dropdown-item" role="menuitem">
-            <span class="dropdown-item-icon">🧓</span> Elderly Care Services
-          </a>
-          <a href="{rel}patient-care-services/" class="dropdown-item" role="menuitem">
-            <span class="dropdown-item-icon">🛏️</span> Patient Care Services
-          </a>
-          <a href="{rel}nursing-services-at-home/" class="dropdown-item" role="menuitem">
-            <span class="dropdown-item-icon">👩‍⚕️</span> Nursing Services at Home
-          </a>
+        <div class="nav-dropdown-menu" role="menu" style="min-width: 320px; max-height: 480px; overflow-y: auto;">
+          {desktop_dropdown}
         </div>
       </div>
 
@@ -121,13 +124,7 @@ def get_header(current_path, depth=0):
       <li class="mobile-nav-item">
         <a href="{rel}services/" class="mobile-nav-link {'active' if is_services else ''}">All Home Care Services</a>
         <div class="mobile-submenu">
-          <a href="{rel}maid-services/" class="mobile-sub-link">🧹 Maid Services</a>
-          <a href="{rel}home-health-care-services/" class="mobile-sub-link">🩺 Home Health Care Services</a>
-          <a href="{rel}caretaker-services/" class="mobile-sub-link">🤝 Caretaker Services</a>
-          <a href="{rel}baby-care-taker/" class="mobile-sub-link">👶 Baby Care Taker</a>
-          <a href="{rel}elderly-care-services/" class="mobile-sub-link">🧓 Elderly Care Services</a>
-          <a href="{rel}patient-care-services/" class="mobile-sub-link">🛏️ Patient Care Services</a>
-          <a href="{rel}nursing-services-at-home/" class="mobile-sub-link">👩‍⚕️ Nursing Services at Home</a>
+          {mobile_submenu}
         </div>
       </li>
       <li class="mobile-nav-item">
@@ -151,6 +148,12 @@ def get_header(current_path, depth=0):
 
 def get_footer(depth=0):
     rel = "./" if depth == 0 else "../"
+    
+    # Build footer services links
+    footer_svc_links = ""
+    for s in SERVICES_NAV:
+        footer_svc_links += f'<li><a href="{rel}{s["slug"]}/" class="footer-link">{s["name"]}</a></li>\n          '
+
     return f'''<!-- Site Footer -->
 <footer class="site-footer">
   <div class="container">
@@ -161,11 +164,11 @@ def get_footer(depth=0):
           <img src="{rel}assets/images/logo.svg" alt="Sugam Home Care Services" width="200" height="44" style="filter: brightness(0) invert(1);">
         </a>
         <p class="footer-brand-p">
-          Providing compassionate, personalized home care services for families in Chennai. From everyday household help and senior companionship to bedside patient care and clinical nursing at home.
+          Providing compassionate, personalized home care, senior care, bedridden patient support, cancer recovery, and qualified nursing services across Chennai and all over Tamil Nadu.
         </p>
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-          <span class="badge-tag" style="background-color: rgba(13, 148, 136, 0.2); color: #2DD4BF;">Verified Address</span>
-          <span class="badge-tag" style="background-color: rgba(255, 255, 255, 0.1); color: #E2E8F0;">Chennai, Tamil Nadu</span>
+          <span class="badge-tag" style="background-color: rgba(13, 148, 136, 0.2); color: #2DD4BF;">Chennai &amp; Tamil Nadu</span>
+          <span class="badge-tag" style="background-color: rgba(255, 255, 255, 0.1); color: #E2E8F0;">24-Hr Service Available</span>
         </div>
       </div>
 
@@ -182,23 +185,17 @@ def get_footer(depth=0):
         </ul>
       </div>
 
-      <!-- Col 3: Services -->
+      <!-- Col 3: Services (11 Approved) -->
       <div class="footer-col">
         <h4>Our Services</h4>
         <ul class="footer-links">
-          <li><a href="{rel}maid-services/" class="footer-link">Maid Services</a></li>
-          <li><a href="{rel}home-health-care-services/" class="footer-link">Home Health Care</a></li>
-          <li><a href="{rel}caretaker-services/" class="footer-link">Caretaker Services</a></li>
-          <li><a href="{rel}baby-care-taker/" class="footer-link">Baby Care Taker</a></li>
-          <li><a href="{rel}elderly-care-services/" class="footer-link">Elderly Care Services</a></li>
-          <li><a href="{rel}patient-care-services/" class="footer-link">Patient Care Services</a></li>
-          <li><a href="{rel}nursing-services-at-home/" class="footer-link">Nursing Services at Home</a></li>
+          {footer_svc_links}
         </ul>
       </div>
 
-      <!-- Col 4: Office & Contact -->
+      <!-- Col 4: Office & Locations -->
       <div class="footer-col">
-        <h4>Office Location</h4>
+        <h4>Office &amp; Service Coverage</h4>
         <p style="color: #CBD5E1; font-size: 0.875rem; line-height: 1.5; margin-bottom: 0.75rem;">
           <strong style="color: #FFFFFF;">Sugam Home Care Services</strong><br>
           No. 123/12, Kattabomman Street,<br>
@@ -211,9 +208,12 @@ def get_footer(depth=0):
         <p style="color: #CBD5E1; font-size: 0.875rem; margin-bottom: 0.5rem;">
           WhatsApp: <a href="https://wa.me/918438861636" data-config="whatsappLink" target="_blank" rel="noopener noreferrer" style="color: #25D366; font-weight: 700;">Chat on WhatsApp</a>
         </p>
-        <p style="color: #94A3B8; font-size: 0.8rem; margin-top: 0.75rem;">
-          Serving New Perungalathur, Tambaram, Chromepet, Vandalur, Pallavaram, and across Chennai.
-        </p>
+        <div style="background: rgba(255, 255, 255, 0.05); padding: 0.75rem; border-radius: var(--radius-sm); border: 1px solid rgba(255, 255, 255, 0.1); margin-top: 0.75rem;">
+          <p style="color: #2DD4BF; font-size: 0.825rem; font-weight: 700; margin-bottom: 0.25rem;">Coverage Notice:</p>
+          <p style="color: #94A3B8; font-size: 0.775rem; line-height: 1.4; margin-bottom: 0;">
+            Primary service available across 35+ Chennai localities (Tambaram, Vandalur, Guduvanchery, Sholinganallur, Navalur, OMR, ECR, Adyar, Velachery, Anna Nagar, Porur, etc.). Services across Tamil Nadu outside Chennai are provided on a One-Day Full (24-Hour) basis.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -250,7 +250,7 @@ def get_footer(depth=0):
   </div>
 </aside>
 
-<!-- Modal: Quick Callback Enquiry -->
+<!-- Modal: Quick Callback Enquiry (11 Services) -->
 <div class="modal-overlay" id="callback-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <div class="modal-card">
     <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
@@ -272,13 +272,17 @@ def get_footer(depth=0):
         <label class="form-label">Service Required <span class="required">*</span></label>
         <select name="service" id="modal-service-select" class="form-control form-select" required>
           <option value="">Select Service</option>
-          <option value="Maid Services">Maid Services</option>
-          <option value="Home Health Care Services">Home Health Care Services</option>
-          <option value="Caretaker Services">Caretaker Services</option>
-          <option value="Baby Care Taker">Baby Care Taker</option>
-          <option value="Elderly Care Services">Elderly Care Services</option>
-          <option value="Patient Care Services">Patient Care Services</option>
-          <option value="Nursing Services at Home">Nursing Services at Home</option>
+          <option value="Baby care services">Baby care services</option>
+          <option value="Elderly care services">Elderly care services</option>
+          <option value="Patient care services">Patient care services</option>
+          <option value="Senior citizen care services">Senior citizen care services</option>
+          <option value="Bedridden patient care services">Bedridden patient care services</option>
+          <option value="Home health care for seniors">Home health care for seniors</option>
+          <option value="Dementia care for the elderly">Dementia care for the elderly</option>
+          <option value="Home care for cancer patients">Home care for cancer patients</option>
+          <option value="Caretaker services at home">Caretaker services at home</option>
+          <option value="Home nurse services">Home nurse services</option>
+          <option value="Nursing Services">Nursing Services</option>
         </select>
       </div>
       <div class="form-group">
@@ -307,4 +311,4 @@ def get_footer(depth=0):
 <script src="{rel}assets/js/form.js"></script>
 '''
 
-print("Helper templates defined successfully!")
+print("Updated site_templates.py successfully!")

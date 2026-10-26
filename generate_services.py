@@ -4,69 +4,225 @@ from site_templates import get_header, get_footer
 
 ROOT_DIR = "/Users/karthik/.gemini/antigravity/scratch/sugam-home-care"
 
-# Service Definitions
+# 11 Approved Services
 SERVICES = [
     {
-        "id": "maid-services",
-        "folder": "maid-services",
-        "title": "Reliable Maid Services for Your Home in Chennai",
-        "meta_title": "Reliable Maid Services in Chennai | Sugam Home Care Services",
-        "meta_desc": "Looking for dependable maid services in Chennai? Sugam Home Care provides trusted household help for sweeping, mopping, kitchen cleaning, dishwashing, and tidying.",
-        "headline": "Reliable Maid Services for Your Home",
-        "tagline": "Keep your home clean, organized, and stress-free with reliable everyday household assistance.",
-        "icon": "🧹",
-        "image": "assets/images/service-maid.svg",
-        "badge": "Household Assistance",
+        "id": "baby-care-services",
+        "folder": "baby-care-services",
+        "title": "Gentle & Loving Baby Care Services in Chennai & Tamil Nadu",
+        "meta_title": "Baby Care Services in Chennai | Newborn & Infant Care | Sugam Home Care",
+        "meta_desc": "Loving, dependable baby care services in Chennai & Tamil Nadu. Newborn massage, warm bathing, bottle feeding assistance, diaper changing, and new mother support.",
+        "headline": "Baby Care Services",
+        "tagline": "Nurturing support for newborns, infants, and toddlers, helping new mothers rest and recover.",
+        "icon": "👶",
+        "image": "assets/images/service-baby-care.svg",
+        "badge": "Infant & Mother Support",
         "who_benefits": [
-            {"title": "Dual-Income Working Couples", "desc": "Free up valuable evening and weekend time by having daily sweeping, mopping, and kitchen upkeep handled reliably."},
-            {"title": "Busy Families with Young Children", "desc": "Keep floors, play areas, and kitchen countertops hygienically sanitized for toddlers and active kids."},
-            {"title": "Senior Citizens Living at Home", "desc": "Remove the physical strain of heavy sweeping, bending, mopping, and utensil cleaning for elderly parents."},
-            {"title": "Individuals Recovering from Illness", "desc": "Maintain a spotless, dust-free home environment while you rest and regain your strength."}
+            {"title": "New Mothers Recovering Postpartum", "desc": "Essential physical relief and rest following normal or caesarean delivery while baby is gently cared for."},
+            {"title": "Working Parents Resuming Careers", "desc": "Dependable, attentive daytime infant care allowing parents to focus on work with complete peace of mind."},
+            {"title": "Families with Infant Twins", "desc": "Extra pairs of experienced hands to manage simultaneous feeding, diaper changes, and soothing routines."},
+            {"title": "First-Time Parents", "desc": "Practical guidance with baby burping, oil massage, warm bath, and establishing comfortable sleep cycles."}
         ],
         "scope": [
-            {"title": "Daily Sweeping & Wet Mopping", "desc": "Thorough dust removal and wet mopping of all living areas, bedrooms, and balconies with disinfectants."},
-            {"title": "Kitchen Slab & Stove Cleaning", "desc": "Wiping down kitchen countertops, grease removal from cooking surfaces, and sink hygiene maintenance."},
-            {"title": "Utensil Washing & Dish Drying", "desc": "Scrubbing, washing, rinsing, and organizing daily cookware, plates, and dining utensils."},
-            {"title": "Dusting & Surface Tidying", "desc": "Regular wiping of dining tables, center tables, accessible shelves, and keeping rooms organized."},
-            {"title": "Laundry & Clothes Care", "desc": "Assistance with machine washing, drying clothes on lines, and folding clean dry clothes."},
-            {"title": "Waste Disposal & Bin Sanitization", "desc": "Daily clearance of kitchen and bathroom dustbins into designated collection zones."}
+            {"title": "Traditional Baby Massage & Bathing", "desc": "Gentle, experienced oil massage techniques followed by warm water baby bathing at the right temperature."},
+            {"title": "Feeding Assistance & Burping", "desc": "Assisting with formula preparation, expressed breast milk bottle feeding, and thorough burping after meals."},
+            {"title": "Diapering & Skin Hygiene", "desc": "Timely diaper changes, gentle cleaning, application of barrier creams, and maintaining rash-free baby skin."},
+            {"title": "Soothing & Sleep Settling", "desc": "Gentle rocking, singing, swaddling, and comforting fussy babies to support regular sleep routines."},
+            {"title": "Sanitizing Baby Accessories", "desc": "Washing and sterilizing feeding bottles, nipples, pacifiers, baby utensils, and bibs."},
+            {"title": "Baby Clothes Washing & Tidying", "desc": "Washing baby clothes with gentle detergents, sun drying, and keeping baby nursery items organized."}
         ],
         "why_us": [
-            {"title": "Respectful & Honest Approach", "desc": "We understand that welcoming someone into your home requires utmost trust and respect for household privacy."},
-            {"title": "Predictable Daily Routines", "desc": "Establish a consistent morning or evening timing that fits seamlessly into your family's schedule."},
-            {"title": "Customized Task Lists", "desc": "Agree on exact daily and weekly chores upfront so expectations are crystal clear on both sides."}
+            {"title": "Gentle, Patient & Caring Nature", "desc": "Handling infants requires boundless patience, clean habits, and genuine love for little ones."},
+            {"title": "Strict Hygiene Standards", "desc": "Regular handwashing, clean attire, and hygienic preparation of all baby feeding tools."},
+            {"title": "Supportive of Mother's Choices", "desc": "We adapt to your family's parenting philosophy, feeding schedules, and household traditions."}
         ],
         "faqs": [
-            {"q": "What tasks are included in standard daily maid services?", "a": "Standard tasks typically include floor sweeping, wet mopping, kitchen slab wipe-down, utensil washing, and basic household tidying. Additional chores like laundry folding or balcony cleaning can be coordinated based on agreed hours."},
-            {"q": "Are maid services available for morning or evening timings?", "a": "Yes, we coordinate maid services according to your family's preferred time slots — typically morning visits (7 AM to 11 AM) or afternoon/evening visits (3 PM to 7 PM)."},
-            {"q": "Which areas in Chennai do you provide maid services?", "a": "We primarily serve New Perungalathur, Perungalathur, Tambaram, Chromepet, Pallavaram, Vandalur, Guduvanchery, Medavakkam, and neighboring South Chennai localities."},
-            {"q": "How are monthly charges calculated?", "a": "Charges are based on the size of your home (e.g. 2 BHK, 3 BHK), the specific chores requested, and the daily time duration. Contact us for a transparent, no-obligation quote."},
-            {"q": "What should we do if our maid is on leave?", "a": "Please notify our care coordinator. Where possible and depending on availability, we assist in coordinating alternative support for extended leaves."}
+            {"q": "At what age can baby care assistance start?", "a": "We arrange assistance starting from newborn stage (first few days after hospital discharge) up to toddlers."},
+            {"q": "Does the caretaker know traditional newborn massage and bath?", "a": "Yes, our experienced baby caretakers are well-versed in gentle oil massage and traditional warm water bathing for infants."},
+            {"q": "Can the baby caretaker assist overnight?", "a": "Yes, we coordinate night-shift baby caretakers so exhausted parents can get uninterrupted sleep while baby is fed and soothed."},
+            {"q": "What locations do you cover for baby care?", "a": "We cover 35+ prime locations across Chennai. Outside Chennai across Tamil Nadu, services are provided on a One-Day Full (24-Hour) basis."},
+            {"q": "How do we enquire and confirm a baby caretaker?", "a": "Contact us with your baby's age, location, and expected start date. We recommend booking in advance before delivery where possible."}
         ],
-        "related": ["caretaker-services", "home-health-care-services", "elderly-care-services"]
+        "related": ["caretaker-services-at-home", "home-health-care-for-seniors", "elderly-care-services"]
     },
     {
-        "id": "home-health-care-services",
-        "folder": "home-health-care-services",
-        "title": "Comprehensive Home Health Care Services in Chennai",
-        "meta_title": "Home Health Care Services Chennai | Sugam Home Care Services",
-        "meta_desc": "Personalized home health care services in Chennai. Routine vitals monitoring, medication supervision, and convalescence support in the comfort of home.",
-        "headline": "Comprehensive Home Health Care Services",
+        "id": "elderly-care-services",
+        "folder": "elderly-care-services",
+        "title": "Dignified Elderly Care Services at Home in Chennai & Tamil Nadu",
+        "meta_title": "Elderly Care Services Chennai | Senior Home Care | Sugam Home Care",
+        "meta_desc": "Dignified elderly care services in Chennai & Tamil Nadu. In-home assistance for seniors: mobility, medication reminders, bathing, fall prevention, and loving companionship.",
+        "headline": "Elderly Care Services",
+        "tagline": "Empowering senior parents to live safely, comfortably, and happily in their own cherished homes.",
+        "icon": "🧓",
+        "image": "assets/images/service-elderly-care.svg",
+        "badge": "Senior Well-Being & Dignity",
+        "who_benefits": [
+            {"title": "Seniors Living Independently", "desc": "Support for elderly parents while sons or daughters live in another city or abroad, ensuring daily well-being."},
+            {"title": "Elders with Age-Related Mobility Issues", "desc": "Safe walking support and fall prevention for seniors with arthritis, Parkinson's, or joint stiffness."},
+            {"title": "Seniors with Memory Concerns", "desc": "Calm, reassuring presence providing gentle orientation, familiar routines, and continuous safety oversight."},
+            {"title": "Families Seeking Respite Care", "desc": "Dedicated support allowing family caregivers time to rest, work, or attend to personal commitments."}
+        ],
+        "scope": [
+            {"title": "Fall Prevention & Walking Support", "desc": "Steadying hands during walking, navigating stairs, using walking aids, and securing bathroom visits."},
+            {"title": "Bathing, Toileting & Grooming", "desc": "Patient, respectful assistance with personal hygiene, sponge/shower baths, oral care, and clean clothes."},
+            {"title": "Medication Timing Reminders", "desc": "Ensuring seniors take their daily cardiac, diabetic, or general health tablets strictly on schedule."},
+            {"title": "Nutritious Senior Meal Assistance", "desc": "Serving warm, easily digestible meals, monitoring fluid intake, and helping with feeding if required."},
+            {"title": "Companionship & Cognitive Engagement", "desc": "Meaningful conversations, reading devotional books or newspapers, and sharing stories to uplift spirits."},
+            {"title": "Daily Health Observation", "desc": "Noting daily mood, sleep quality, appetite, and alerting family members to any noticeable changes."}
+        ],
+        "why_us": [
+            {"title": "Respecting Senior Independence", "desc": "We assist without taking away dignity, encouraging seniors to remain active and engaged in their daily lives."},
+            {"title": "Tamil & Local Cultural Familiarity", "desc": "Caregivers who understand traditional South Indian senior preferences, vegetarian habits, and regional dialects."},
+            {"title": "Tamil Nadu Wide Service Availability", "desc": "Full-time shift care available across Chennai and on a 24-Hour full-day basis all over Tamil Nadu."}
+        ],
+        "faqs": [
+            {"q": "Can care be arranged for elderly parents living alone in Chennai?", "a": "Yes. A significant number of families we support have children living in other cities or overseas. We provide structured daily care and maintain close phone/WhatsApp coordination with family."},
+            {"q": "How do you address safety and fall prevention at home?", "a": "Our caretakers remain physically alongside seniors during bathroom visits, bed-to-chair transfers, and walking routines to avoid slips and trips."},
+            {"q": "Can we arrange elder care on a trial period before committing long-term?", "a": "Yes, we encourage families to start with an initial period to ensure comfortable rapport between your elderly parent and the caregiver."},
+            {"q": "What shift timings can we choose from?", "a": "We offer 12-hour day shifts, 12-hour night shifts, and comprehensive 24-hour live-in elderly care."},
+            {"q": "Are services available outside Chennai?", "a": "Yes, we provide elder care across all districts of Tamil Nadu on a One-Day Full (24-Hour) basis."}
+        ],
+        "related": ["senior-citizen-care-services", "dementia-care-for-the-elderly", "caretaker-services-at-home"]
+    },
+    {
+        "id": "patient-care-services",
+        "folder": "patient-care-services",
+        "title": "Dedicated Patient Care Services at Home in Chennai & Tamil Nadu",
+        "meta_title": "Patient Care Services Chennai | Bedside Patient Care | Sugam Home Care",
+        "meta_desc": "Dedicated patient care services in Chennai & Tamil Nadu. Attentive support for recovering patients, mobility assistance, sponge bathing, feeding, and personal hygiene.",
+        "headline": "Patient Care Services",
+        "tagline": "Attentive bedside support and physical assistance for recovering individuals at home.",
+        "icon": "🛏️",
+        "image": "assets/images/service-patient-care.svg",
+        "badge": "Bedside Recovery Support",
+        "who_benefits": [
+            {"title": "Post-Operative Recovery Patients", "desc": "Gentle assistance following major orthopedic, spine, or general surgery during initial recovery weeks."},
+            {"title": "Stroke & Neurological Recovery", "desc": "Supporting patients with hemiplegia or weakness with transfers, eating assistance, and daily care routines."},
+            {"title": "Immobilized & Weak Individuals", "desc": "Specialized bed care focusing on comfort positioning, assisted movement, and meticulous personal hygiene."},
+            {"title": "Family Caregiver Relief", "desc": "Providing dependable hands-on physical assistance so family members can rest and manage other duties."}
+        ],
+        "scope": [
+            {"title": "Bed Bathing & Personal Hygiene", "desc": "Thorough warm sponge bathing in bed, oral care, hair grooming, and prompt linen changes."},
+            {"title": "Assisted Transfers & Mobility", "desc": "Safe assistance transferring between bed, commode chair, and wheelchair, avoiding sudden strain."},
+            {"title": "Diaper & Underpad Care", "desc": "Timely adult diaper changes, thorough perineal cleaning, and application of protective barrier creams."},
+            {"title": "Feeding Support (Oral / Pureed)", "desc": "Assistance with soft diet feeding, soups, juices, and monitoring hydration levels."},
+            {"title": "Medication & Doctor Reminders", "desc": "Timely administration of oral medicines as prescribed in the hospital discharge summary."},
+            {"title": "Post-Surgical Convalescence Support", "desc": "Keeping resting posture comfortable and monitoring patient comfort throughout day or night."}
+        ],
+        "why_us": [
+            {"title": "Trained Bedside Attendants", "desc": "Experienced in safe lifting techniques, infection avoidance, and respectful handling of vulnerable patients."},
+            {"title": "Reduced Hospital Readmissions", "desc": "Consistent hygiene and attentive skin care prevent common post-discharge complications."},
+            {"title": "Tamil Nadu Wide Full-Day Care", "desc": "Available across Chennai and on a 24-Hour full-day basis all over Tamil Nadu."}
+        ],
+        "faqs": [
+            {"q": "What is the difference between a patient care attendant and a registered nurse?", "a": "A patient care attendant handles hands-on physical care: turning, bed bathing, diapering, feeding assistance, and comfort. A registered nurse performs clinical procedures: administering IV medications, sterile dressing, and clinical catheterization."},
+            {"q": "Can a patient care attendant help immediately after hospital discharge?", "a": "Yes. We coordinate attendants ready to assist from the day of hospital discharge."},
+            {"q": "Can patient care be provided 24 hours a day?", "a": "Yes, we provide 24-hour round-the-clock patient care arrangements with dedicated day and night attendants."},
+            {"q": "What equipment is helpful to have at home?", "a": "Depending on patient condition, an adjustable hospital bed, air mattress, adult diapers, wet wipes, and a wheelchair or commode chair are helpful."},
+            {"q": "Do you cover outside Chennai?", "a": "Yes, patient care services are available all over Tamil Nadu on a 24-Hour One-Day Full basis."}
+        ],
+        "related": ["bedridden-patient-care-services", "home-care-for-cancer-patients", "nursing-services"]
+    },
+    {
+        "id": "senior-citizen-care-services",
+        "folder": "senior-citizen-care-services",
+        "title": "Comprehensive Senior Citizen Care Services in Chennai & Tamil Nadu",
+        "meta_title": "Senior Citizen Care Services Chennai | Elderly Companion Care | Sugam Home Care",
+        "meta_desc": "Compassionate senior citizen care services in Chennai & Tamil Nadu. Daily living support, walking assistance, nutritious meal help, and empathetic companion care.",
+        "headline": "Senior Citizen Care Services",
+        "tagline": "Empowering senior citizens with active daily living assistance, walking support, meal assistance, and social engagement.",
+        "icon": "👴",
+        "image": "assets/images/service-senior-citizen.svg",
+        "badge": "Senior Citizen Support",
+        "who_benefits": [
+            {"title": "Independent Seniors Needing Daytime Help", "desc": "Safe assistance with morning walks, reading, meal serving, and managing daily domestic routines."},
+            {"title": "Seniors with Joint Pain & Arthritis", "desc": "Hands-on support steadying seniors during walking, sitting, and navigating household steps."},
+            {"title": "Seniors Living Alone in Chennai", "desc": "Dependable daily visits or live-in companions ensuring emergency safety and emotional reassurance."},
+            {"title": "Sons & Daughters Working Overseas", "desc": "Peace of mind knowing your parents receive attentive, respectful daily care with transparent communication."}
+        ],
+        "scope": [
+            {"title": "Daily Living & Mobility Support", "desc": "Assisting with morning wake-up routines, walking support, and gentle physical movement."},
+            {"title": "Nutritious Meal Assistance", "desc": "Serving warm, freshly prepared senior-friendly meals on time and encouraging adequate water intake."},
+            {"title": "Prescription Medication Reminders", "desc": "Keeping daily medicine boxes organized and ensuring tablets are taken strictly on time."},
+            {"title": "Accompaniment on Walks & Outings", "desc": "Accompanying seniors to neighborhood temples, parks, evening walks, or clinic appointments."},
+            {"title": "Social Engagement & Conversation", "desc": "Active conversation in Tamil or English, reading newspapers, playing games, and uplifting senior morale."},
+            {"title": "Emergency Vigilance", "desc": "Immediate alerting of family members or doctors in case of sudden weakness, dizziness, or distress."}
+        ],
+        "why_us": [
+            {"title": "Empathy, Patience & Respect", "desc": "Our caretakers are trained to value senior wisdom, honor their routines, and provide gentle companionship."},
+            {"title": "Local Cultural Understanding", "desc": "Familiarity with South Indian vegetarian routines, traditional prayers, and respectful habits."},
+            {"title": "Flexible 12-Hour & 24-Hour Shifts", "desc": "Arrangements tailored to your family's exact daytime, nighttime, or full-day requirements."}
+        ],
+        "faqs": [
+            {"q": "How does senior citizen care differ from patient care?", "a": "Senior citizen care focuses on active daily living, mobility, companionship, meal assistance, and lifestyle support for relatively mobile elders, while patient care focuses on bedside recovery and physical convalescence."},
+            {"q": "Can the caregiver prepare light meals for my parents?", "a": "Yes, our senior caregivers can assist with serving, warming, or preparing light wholesome meals such as kanji, idli, upma, or fruits."},
+            {"q": "Do your caregivers speak Tamil?", "a": "Yes, our caregivers speak Tamil and understand regional Chennai and Tamil Nadu household culture."},
+            {"q": "Are senior citizen services available outside Chennai?", "a": "Yes, across all districts of Tamil Nadu on a One-Day Full (24-Hour) care basis."},
+            {"q": "How do we get started?", "a": "Call us at +91 84388 61636 or submit the enquiry form with your parents' location and care needs."}
+        ],
+        "related": ["elderly-care-services", "home-health-care-for-seniors", "dementia-care-for-the-elderly"]
+    },
+    {
+        "id": "bedridden-patient-care-services",
+        "folder": "bedridden-patient-care-services",
+        "title": "Specialized Bedridden Patient Care Services in Chennai & Tamil Nadu",
+        "meta_title": "Bedridden Patient Care Services Chennai | Bedsore Prevention | Sugam Home Care",
+        "meta_desc": "Specialized bedridden patient care services in Chennai & Tamil Nadu. 2-hour repositioning, bedsore prevention, sponge bathing, adult diaper hygiene, and gentle feeding.",
+        "headline": "Bedridden Patient Care Services",
+        "tagline": "Specialized, gentle bedside assistance for bedridden individuals, focusing on bedsore prevention and dignity.",
+        "icon": "🛌",
+        "image": "assets/images/service-bedridden.svg",
+        "badge": "Intensive Bedside Care",
+        "who_benefits": [
+            {"title": "Completely Bedridden Seniors", "desc": "Patients unable to turn or get out of bed independently, requiring dedicated 24-hour hands-on care."},
+            {"title": "Paralysis & Severe Stroke Patients", "desc": "Attentive positioning, passive limb movement, and specialized feeding assistance for hemiplegia patients."},
+            {"title": "Spine & Hip Fracture Recovery", "desc": "Immobilized patients needing gentle bed bathing, bedpan assistance, and zero-strain posture care."},
+            {"title": "End-Stage Palliative Care", "desc": "Compassionate, peaceful bedside care keeping patients clean, pain-managed, and comforted at home."}
+        ],
+        "scope": [
+            {"title": "2-Hour Position Turning", "desc": "Strict scheduled body repositioning between left lateral, back, and right lateral to prevent pressure ulcers."},
+            {"title": "Bedsore Prevention & Skin Care", "desc": "Inspecting pressure points (sacrum, heels, elbows), applying barrier creams, and ensuring wrinkle-free linen."},
+            {"title": "Daily Sponge Bathing in Bed", "desc": "Warm, gentle head-to-toe sponge bathing, hair cleaning, mouth hygiene, and skin moisturizing in bed."},
+            {"title": "Adult Diaper & Incontinence Hygiene", "desc": "Frequent diaper inspections, prompt cleaning with wet wipes, and maintaining sterile perineal hygiene."},
+            {"title": "Catheter & Drainage Bag Care", "desc": "Emptying urinary drainage bags hygienically, monitoring output volume, and preventing tube entanglement."},
+            {"title": "Assisted Feeding & Hydration", "desc": "Careful elevated feeding of pureed diets, soups, or assisting family with Ryle's tube feeding timings."}
+        ],
+        "why_us": [
+            {"title": "Trained in Safe Bedside Techniques", "desc": "Attendants trained in safe turning, infection prevention, and dignified handling of immobilized patients."},
+            {"title": "Zero Compromise on Hygiene", "desc": "Strict cleanliness routines preventing urinary tract infections and skin breakdown."},
+            {"title": "Round-the-Clock (24/7) Shifts", "desc": "Dedicated day and night attendants ensuring uninterrupted bedside vigilance."}
+        ],
+        "faqs": [
+            {"q": "How do your caregivers prevent bedsores in bedridden patients?", "a": "We maintain strict 2-hour turning schedules, use ripple air mattresses, keep skin completely clean and dry, apply medical barrier creams, and inspect bony prominences daily."},
+            {"q": "Can your attendants manage Ryle's tube feeding?", "a": "Yes, our attendants assist with preparing and administering prescribed liquid feeds at the recommended head-elevated angle and schedule."},
+            {"q": "Is bedridden patient care available on a 24-hour basis?", "a": "Yes, 24-hour live-in or day/night shifts are our primary format for bedridden patient care."},
+            {"q": "Do you provide this service outside Chennai in Tamil Nadu?", "a": "Yes, bedridden patient care is available all over Tamil Nadu on a 24-Hour One-Day Full care basis."},
+            {"q": "What should the family arrange at home?", "a": "An adjustable hospital bed, air mattress, adult diapers, wet wipes, and skin barrier ointment are highly recommended."}
+        ],
+        "related": ["patient-care-services", "home-care-for-cancer-patients", "nursing-services"]
+    },
+    {
+        "id": "home-health-care-for-seniors",
+        "folder": "home-health-care-for-seniors",
+        "title": "Home Health Care Services for Seniors in Chennai & Tamil Nadu",
+        "meta_title": "Home Health Care for Seniors Chennai | Geriatric Health Monitoring | Sugam Home Care",
+        "meta_desc": "Structured home health care services for seniors in Chennai & Tamil Nadu. Routine vital signs monitoring (BP, sugar, pulse), medication supervision, and convalescence.",
+        "headline": "Home Health Care for Seniors",
         "tagline": "Personalized health support, vitals monitoring, and recovery assistance in the comfort of your home.",
         "icon": "🩺",
         "image": "assets/images/service-home-health.svg",
-        "badge": "Health Monitoring & Recovery",
+        "badge": "Senior Health Monitoring",
         "who_benefits": [
-            {"title": "Patients Recently Discharged from Hospital", "desc": "Smooth transition from hospital to home with structured daily health monitoring and recovery support."},
-            {"title": "Individuals with Chronic Conditions", "desc": "Consistent tracking of blood pressure, blood glucose, and medication schedules for hypertension or diabetes."},
-            {"title": "Seniors Needing Health Supervision", "desc": "Routine health oversight ensuring elders adhere to doctor recommendations and maintain steady wellness."},
-            {"title": "Families Seeking Peace of Mind", "desc": "Continuous monitoring and family communication so working children know their parents are well cared for."}
+            {"title": "Seniors with Hypertension & Diabetes", "desc": "Consistent recording of blood pressure and glucose levels, preventing sudden spikes or drops."},
+            {"title": "Post-Hospital Discharge Recovery", "desc": "Smooth transition from hospital to home with structured daily health monitoring and recovery guidance."},
+            {"title": "Elders with Multiple Prescriptions", "desc": "Eliminating missed or duplicate doses with disciplined medication schedule supervision."},
+            {"title": "Families Seeking Preventive Oversight", "desc": "Early detection of health fluctuations, avoiding emergency hospital admissions."}
         ],
         "scope": [
             {"title": "Vital Signs Monitoring", "desc": "Regular recording of blood pressure, pulse, oxygen saturation (SpO2), body temperature, and blood glucose levels."},
             {"title": "Medication Schedule Supervision", "desc": "Ensuring doctor-prescribed medications are taken at the right doses and correct times with meals."},
-            {"title": "Post-Discharge Recovery Care", "desc": "Assisting patients with resting routines, hydration, mobility precautions, and recuperation steps."},
-            {"title": "Dietary & Hydration Tracking", "desc": "Monitoring patient fluid intake and supporting nutritious, doctor-recommended meal schedules."},
+            {"title": "Post-Discharge Recovery Care", "desc": "Assisting seniors with resting routines, hydration, mobility precautions, and recuperation steps."},
+            {"title": "Dietary & Hydration Tracking", "desc": "Monitoring senior fluid intake and supporting nutritious, doctor-recommended meal schedules."},
             {"title": "Caregiver Coordination with Family", "desc": "Maintaining daily health logs and communicating vital observations with family members."},
             {"title": "Comfort & Mobility Assistance", "desc": "Assisting with gentle movement, postural comfort, and encouraging prescribed physiotherapy exercises."}
         ],
@@ -78,20 +234,98 @@ SERVICES = [
         "faqs": [
             {"q": "What is the difference between home health care and home nursing?", "a": "Home health care focuses on routine health supervision, vitals tracking, medication reminders, and general convalescence support. Home nursing specifically involves clinical procedures (such as injections, IV drips, wound dressings, and catheterization) performed by qualified nurses."},
             {"q": "Can your staff coordinate with our family doctor?", "a": "Yes, our team follows the discharge instructions and health guidelines provided by your attending physician or hospital team."},
-            {"q": "How frequently are vital signs recorded?", "a": "Depending on the patient's condition, vitals can be recorded once or twice daily, or before and after medication schedules as recommended."},
-            {"q": "What shifts are available for home health care?", "a": "We offer flexible arrangements including 12-hour day shifts, 12-hour night shifts, or continuous 24-hour home health assistance."},
-            {"q": "How quickly can home health care support begin?", "a": "We recommend contacting us 24 to 48 hours prior to hospital discharge so we can review requirements and arrange suitable support."}
+            {"q": "How frequently are vital signs recorded?", "a": "Depending on the senior's condition, vitals can be recorded once or twice daily, or before and after medication schedules as recommended."},
+            {"q": "What locations do you serve?", "a": "We serve 35+ locations in Chennai, and all over Tamil Nadu on a 24-Hour One-Day Full care basis."},
+            {"q": "How quickly can senior health care support begin?", "a": "We recommend contacting us 24 to 48 hours prior to hospital discharge or required start date so we can arrange suitable personnel."}
         ],
-        "related": ["patient-care-services", "nursing-services-at-home", "elderly-care-services"]
+        "related": ["elderly-care-services", "senior-citizen-care-services", "home-nurse-services"]
     },
     {
-        "id": "caretaker-services",
-        "folder": "caretaker-services",
-        "title": "Compassionate Caretaker Services in Chennai",
-        "meta_title": "Compassionate Caretaker Services Chennai | Sugam Home Care",
-        "meta_desc": "Dedicated caretaker services in Chennai for daily living assistance, personal grooming, mobility, feeding, and reassuring companionship at home.",
-        "headline": "Compassionate Caretaker Services for Your Loved Ones",
-        "tagline": "Attentive assistance with everyday living, personal grooming, mobility, and companionship.",
+        "id": "dementia-care-for-the-elderly",
+        "folder": "dementia-care-for-the-elderly",
+        "title": "Compassionate Dementia Care for the Elderly in Chennai & Tamil Nadu",
+        "meta_title": "Dementia Care for the Elderly Chennai | Alzheimer's Home Care | Sugam Home Care",
+        "meta_desc": "Specialized dementia care for the elderly in Chennai & Tamil Nadu. Memory support, wandering safety, reassuring routines, and loving patience for Alzheimer's patients.",
+        "headline": "Dementia Care for the Elderly",
+        "tagline": "Specialized cognitive support, calm daily routines, reassurance, and continuous safety oversight for seniors with memory loss.",
+        "icon": "🧠",
+        "image": "assets/images/service-dementia.svg",
+        "badge": "Specialized Memory Care",
+        "who_benefits": [
+            {"title": "Seniors with Alzheimer's Disease", "desc": "Specialized care addressing memory loss, disorientation, and confusion with endless patience and calm presence."},
+            {"title": "Elders Prone to Wandering", "desc": "24/7 attentive supervision preventing seniors from leaving home unaccompanied or getting lost."},
+            {"title": "Seniors Experiencing Sundowning", "desc": "Gentle soothing routines during late afternoons and evenings to reduce anxiety, pacing, and restlessness."},
+            {"title": "Exhausted Family Caregivers", "desc": "Much-needed respite care relieving emotional and physical burnout for family members."}
+        ],
+        "scope": [
+            {"title": "Wandering Prevention & Home Safety", "desc": "Continuous vigilance ensuring doors are secured and potential home hazards (stoves, sharp items, water) are safe."},
+            {"title": "Predictable Daily Routines", "desc": "Establishing consistent morning, meal, and bedtime routines to provide emotional stability and comfort."},
+            {"title": "Gentle Bathing & Grooming Assistance", "desc": "Patient, step-by-step guidance for personal hygiene, avoiding agitation through soothing, non-confrontational communication."},
+            {"title": "Nutritious Eating Encouragement", "desc": "Assisting seniors who forget to eat or drink, serving easily manageable finger foods and maintaining hydration."},
+            {"title": "Cognitive Engagement & Reminiscence", "desc": "Looking through old family photos, listening to favorite Carnatic music, and recalling positive cherished memories."},
+            {"title": "De-Escalation & Validation", "desc": "Validating the senior's emotions rather than arguing, gently redirecting focus to calm anxiety and frustration."}
+        ],
+        "why_us": [
+            {"title": "Trained in Dementia Communication", "desc": "Caregivers understand the psychology of memory decline, practicing validation, gentle eye contact, and patience."},
+            {"title": "Home Environment Preservation", "desc": "Keeping dementia patients in their familiar home surroundings significantly reduces disorientation and distress."},
+            {"title": "Tamil Nadu Wide 24-Hour Coverage", "desc": "Available across Chennai and on a 24-Hour live-in basis all over Tamil Nadu."}
+        ],
+        "faqs": [
+            {"q": "Why is in-home care better than an institution for dementia patients?", "a": "Familiar sights, sounds, family photos, and home bedrooms provide grounding reassurance. Moving a dementia patient to an unfamiliar facility often increases agitation, confusion, and cognitive decline."},
+            {"q": "How do your caregivers handle agitation or stubbornness?", "a": "We use de-escalation techniques: validating their feelings, speaking in a calm warm tone in Tamil, redirecting attention with music or a favorite drink, and never arguing."},
+            {"q": "Can dementia care be arranged 24 hours a day?", "a": "Yes, 24-hour continuous oversight is strongly recommended for dementia and Alzheimer's patients to prevent nighttime wandering and falls."},
+            {"q": "Do you cover locations outside Chennai?", "a": "Yes, across all districts of Tamil Nadu on a 24-Hour One-Day Full care basis."},
+            {"q": "How do we get started?", "a": "Call our care team at +91 84388 61636 to discuss your family member's stage of dementia and behavioral patterns."}
+        ],
+        "related": ["elderly-care-services", "senior-citizen-care-services", "home-health-care-for-seniors"]
+    },
+    {
+        "id": "home-care-for-cancer-patients",
+        "folder": "home-care-for-cancer-patients",
+        "title": "Compassionate Home Care for Cancer Patients in Chennai & Tamil Nadu",
+        "meta_title": "Home Care for Cancer Patients Chennai | Oncology Palliative Care | Sugam Home Care",
+        "meta_desc": "Compassionate home care for cancer patients in Chennai & Tamil Nadu. Post-chemotherapy recovery support, comfort positioning, nutrition tracking, and palliative care.",
+        "headline": "Home Care for Cancer Patients",
+        "tagline": "Supportive post-chemotherapy recovery, comfort positioning, nutritional hydration tracking, and palliative companionship.",
+        "icon": "🎗️",
+        "image": "assets/images/service-cancer-care.svg",
+        "badge": "Supportive Oncology Care",
+        "who_benefits": [
+            {"title": "Patients Undergoing Chemotherapy", "desc": "Attentive bedside care managing extreme fatigue, nausea support, hydration tracking, and resting comfort."},
+            {"title": "Post-Radiation Recovery Patients", "desc": "Gentle skin protection, resting posture support, and comfortable daily living assistance at home."},
+            {"title": "Advanced Stage Palliative Care", "desc": "Dignified, pain-conscious comfort care, emotional presence, and peaceful home companionship."},
+            {"title": "Families Needing Dedicated Support", "desc": "Experienced caregivers who shoulder daily physical care so family can focus on love and emotional strength."}
+        ],
+        "scope": [
+            {"title": "Post-Chemotherapy Rest & Comfort", "desc": "Creating a quiet, sterile, restful environment, adjusting pillows and posture to alleviate body aches and nausea."},
+            {"title": "Gentle Nutrition & Hydration Tracking", "desc": "Serving small frequent bland meals, nutrient-rich broths, coconut water, and preventing dehydration."},
+            {"title": "Meticulous Infection Prevention", "desc": "Strict hygiene, clean linen, sanitized utensils, and visitor precautions to protect immunocompromised patients."},
+            {"title": "Assisted Sponge Bathing & Hygiene", "desc": "Gentle, non-exhausting bed sponge baths, oral mouth rinses for mucositis, and careful skin moisturizing."},
+            {"title": "Medication Timing & Prescription Reminders", "desc": "Ensuring pain management, anti-nausea, and antibiotic medications are administered on schedule per doctor's orders."},
+            {"title": "Emotional & Palliative Companionship", "desc": "Compassionate listening, soothing presence, and supporting the dignity of the patient at all times."}
+        ],
+        "why_us": [
+            {"title": "Gentle, Dignified Oncology Support", "desc": "We understand the physical and emotional roller coaster of cancer treatment and provide supportive, loving care."},
+            {"title": "Avoid Hospital Infection Risks", "desc": "Resting at home protects vulnerable, low-immunity patients from hospital-acquired infections."},
+            {"title": "Available Across Chennai & Tamil Nadu", "desc": "Shift care across Chennai and 24-Hour full-day service all over Tamil Nadu."}
+        ],
+        "faqs": [
+            {"q": "Can your staff manage patients with low immunity (neutropenia)?", "a": "Yes. Our caregivers follow strict hand hygiene, mask-wearing, sanitized utensil preparation, and clean linen protocols to protect immunocompromised patients."},
+            {"q": "What if the patient needs IV pain medication or saline drips?", "a": "For IV infusions, doctor-prescribed injections, or port flushes, we coordinate qualified nurses through our Nursing Services."},
+            {"q": "Is 24-hour bedside care available for cancer patients?", "a": "Yes, we provide 24-hour day-and-night attendant support for continuous comfort and assistance."},
+            {"q": "Do you provide oncology care outside Chennai?", "a": "Yes, we serve families across all districts of Tamil Nadu on a 24-Hour One-Day Full care basis."},
+            {"q": "How do we arrange cancer home care?", "a": "Call us at +91 84388 61636 with details of your treatment phase and we will arrange experienced attendants promptly."}
+        ],
+        "related": ["patient-care-services", "bedridden-patient-care-services", "nursing-services"]
+    },
+    {
+        "id": "caretaker-services-at-home",
+        "folder": "caretaker-services-at-home",
+        "title": "Trusted Caretaker Services at Home in Chennai & Tamil Nadu",
+        "meta_title": "Caretaker Services at Home Chennai | Daily Living Assistance | Sugam Home Care",
+        "meta_desc": "Trusted caretaker services at home in Chennai & Tamil Nadu. Dedicated assistance with personal grooming, mobility, feeding, medication reminders, and companionship.",
+        "headline": "Caretaker Services at Home",
+        "tagline": "Attentive everyday assistance with daily living, personal grooming, mobility, and companionship.",
         "icon": "🤝",
         "image": "assets/images/service-caretaker.svg",
         "badge": "Everyday Living Support",
@@ -115,147 +349,69 @@ SERVICES = [
             {"title": "Language & Cultural Comfort", "desc": "Caregivers who understand local Tamil customs, dietary habits, and respectful communication."}
         ],
         "faqs": [
-            {"q": "Can caretakers administer injections or dress surgical wounds?", "a": "No. Caretakers provide non-clinical personal care and mobility assistance. For clinical procedures like injections, IV fluids, or wound dressings, please enquire for our Nursing Services at Home."},
+            {"q": "Can caretakers administer injections or dress surgical wounds?", "a": "No. Caretakers provide non-clinical personal care and mobility assistance. For clinical procedures like injections, IV fluids, or wound dressings, please enquire for our Nursing Services."},
             {"q": "What shift options are available?", "a": "We provide 10 to 12-hour daytime assistance, 12-hour night care, and 24-hour round-the-clock live-in arrangements."},
             {"q": "How do you match a caretaker to our family?", "a": "We assess your family member's age, physical mobility, gender preference, language comfort, and required daily duties to suggest the most suitable match."},
-            {"q": "Can caretakers accompany loved ones to doctor appointments?", "a": "Yes, caretakers can accompany family members to hospital check-ups, diagnostic labs, or neighborhood walks when agreed upon."},
-            {"q": "How do we get started?", "a": "Simply call our team or submit the enquiry form. We will discuss your exact requirements and explain available options."}
+            {"q": "Are caretaker services available across Tamil Nadu?", "a": "Yes, across all districts of Tamil Nadu on a 24-Hour One-Day Full care basis."},
+            {"q": "How do we get started?", "a": "Simply call our team at +91 84388 61636 or submit the enquiry form."}
         ],
-        "related": ["elderly-care-services", "patient-care-services", "maid-services"]
+        "related": ["elderly-care-services", "patient-care-services", "senior-citizen-care-services"]
     },
     {
-        "id": "baby-care-taker",
-        "folder": "baby-care-taker",
-        "title": "Gentle & Trustworthy Baby Care Taker Services in Chennai",
-        "meta_title": "Baby Care Taker in Chennai | Newborn & Infant Care | Sugam Home Care",
-        "meta_desc": "Loving, dependable baby care taker services in Chennai. Newborn massage, gentle bathing, bottle feeding assistance, diaper changing, and mother support.",
-        "headline": "Gentle & Trustworthy Baby Care Taker Services",
-        "tagline": "Nurturing support for newborns, infants, and toddlers, helping new mothers rest and recover.",
-        "icon": "👶",
-        "image": "assets/images/service-baby-care.svg",
-        "badge": "Infant & Mother Support",
-        "who_benefits": [
-            {"title": "New Mothers Recovering Postpartum", "desc": "Essential physical relief and rest following normal or caesarean delivery while baby is gently cared for."},
-            {"title": "Working Parents Resuming Careers", "desc": "Dependable, attentive daytime infant care allowing parents to focus on work with complete peace of mind."},
-            {"title": "Families with Infant Twins", "desc": "Extra pairs of experienced hands to manage simultaneous feeding, diaper changes, and soothing routines."},
-            {"title": "First-Time Parents", "desc": "Practical guidance with baby burping, massage, bathing, and establishing comfortable sleep cycles."}
-        ],
-        "scope": [
-            {"title": "Traditional Baby Massage & Bathing", "desc": "Gentle, experienced oil massage techniques followed by warm water baby bathing at the right temperature."},
-            {"title": "Feeding Assistance & Burping", "desc": "Assisting with formula preparation, expressed breast milk bottle feeding, and thorough burping after meals."},
-            {"title": "Diapering & Skin Hygiene", "desc": "Timely diaper changes, gentle cleaning, application of barrier creams, and maintaining rash-free baby skin."},
-            {"title": "Soothing & Sleep Settling", "desc": "Gentle rocking, singing, swaddling, and comforting fussy babies to support regular sleep routines."},
-            {"title": "Sanitizing Baby Accessories", "desc": "Washing and sterilizing feeding bottles, nipples, pacifiers, baby utensils, and bibs."},
-            {"title": "Baby Clothes Washing & Tidying", "desc": "Washing baby clothes with gentle detergents, sun drying, and keeping baby nursery items organized."}
-        ],
-        "why_us": [
-            {"title": "Gentle, Patient & Caring Nature", "desc": "Handling infants requires boundless patience, clean habits, and genuine love for little ones."},
-            {"title": "Strict Hygiene Standards", "desc": "Regular handwashing, clean attire, and hygienic preparation of all baby feeding tools."},
-            {"title": "Supportive of Mother's Choices", "desc": "We adapt to your family's parenting philosophy, feeding schedules, and household traditions."}
-        ],
-        "faqs": [
-            {"q": "At what age can baby care assistance start?", "a": "We can arrange assistance starting from newborn stage (first few days after hospital discharge) up to toddlers."},
-            {"q": "Does the caretaker know traditional newborn massage and bath?", "a": "Yes, our experienced baby caretakers are well-versed in gentle oil massage and traditional warm water bathing for infants."},
-            {"q": "Can the baby caretaker assist overnight?", "a": "Yes, we coordinate night-shift baby caretakers so exhausted parents can get uninterrupted sleep while baby is fed and soothed."},
-            {"q": "What should the family provide for baby care?", "a": "The family provides all baby consumables (massage oil, soap, diapers, wipes, formula, bottles, sterilizer, and baby clothing)."},
-            {"q": "How do we enquire and confirm a baby caretaker?", "a": "Contact us with your baby's age, location in Chennai, and expected start date. We recommend booking in advance before delivery where possible."}
-        ],
-        "related": ["maid-services", "caretaker-services", "home-health-care-services"]
-    },
-    {
-        "id": "elderly-care-services",
-        "folder": "elderly-care-services",
-        "title": "Dignified Elderly Care Services at Home in Chennai",
-        "meta_title": "Elderly Care Services Chennai | Senior Home Care | Sugam Home Care",
-        "meta_desc": "Dignified elderly care services in Chennai. In-home assistance for seniors: mobility, medication reminders, bathing, fall prevention, and loving companionship.",
-        "headline": "Dignified Elderly Care Services at Home",
-        "tagline": "Empowering senior parents to live safely, comfortably, and happily in their own cherished homes.",
-        "icon": "🧓",
-        "image": "assets/images/service-elderly-care.svg",
-        "badge": "Senior Well-Being & Dignity",
-        "who_benefits": [
-            {"title": "Seniors Living Independently in Chennai", "desc": "Support for elderly parents while sons or daughters live in another city or abroad, ensuring daily well-being."},
-            {"title": "Elders with Age-Related Mobility Issues", "desc": "Safe walking support and fall prevention for seniors with arthritis, Parkinson's, or joint stiffness."},
-            {"title": "Seniors with Memory Loss or Dementia", "desc": "Calm, reassuring presence providing gentle orientation, familiar routines, and continuous safety oversight."},
-            {"title": "Families Seeking Respite Care", "desc": "Dedicated support allowing family caregivers time to rest, work, or attend to personal commitments."}
-        ],
-        "scope": [
-            {"title": "Fall Prevention & Walking Support", "desc": "Steadying hands during walking, navigating stairs, using walking aids, and securing bathroom visits."},
-            {"title": "Bathing, Toileting & Grooming", "desc": "Patient, respectful assistance with personal hygiene, sponge/shower baths, oral care, and clean clothes."},
-            {"title": "Medication Timing Reminders", "desc": "Ensuring seniors take their daily cardiac, diabetic, or general health tablets strictly on schedule."},
-            {"title": "Nutritious Senior Meal Assistance", "desc": "Serving warm, easily digestible meals, monitoring fluid intake, and helping with feeding if required."},
-            {"title": "Companionship & Cognitive Engagement", "desc": "Meaningful conversations, reading devotional books or newspapers, and sharing stories to uplift spirits."},
-            {"title": "Daily Health Observation", "desc": "Noting daily mood, sleep quality, appetite, and alerting family members to any noticeable changes."}
-        ],
-        "why_us": [
-            {"title": "Respecting Senior Independence", "desc": "We assist without taking away dignity, encouraging seniors to remain active and engaged in their daily lives."},
-            {"title": "Tamil & Local Cultural Familiarity", "desc": "Caregivers who understand traditional South Indian senior preferences, vegetarian habits, and regional dialects."},
-            {"title": "Transparent Communication with Children", "desc": "Regular check-ins and updates for family members, whether residing in Chennai or overseas."}
-        ],
-        "faqs": [
-            {"q": "Can care be arranged for elderly parents living alone in Chennai?", "a": "Yes. A significant number of families we support have children living in other cities or overseas. We provide structured daily care and maintain close phone/WhatsApp coordination with family."},
-            {"q": "How do you ensure bathroom safety and fall prevention?", "a": "Our caretakers are trained to remain physically alongside seniors during bathroom visits, bed-to-chair transfers, and walking routines to avoid slips and trips."},
-            {"q": "Can we arrange elder care on a trial basis?", "a": "Yes, we encourage families to start with an initial period to ensure comfortable rapport between your elderly parent and the caregiver."},
-            {"q": "What shift timings can we choose from?", "a": "We offer 12-hour day shifts, 12-hour night shifts, and comprehensive 24-hour live-in elderly care."},
-            {"q": "How do we initiate senior care?", "a": "Call us or submit the enquiry form. We will discuss your parent's mobility level, medical history, and daily routine to recommend the right plan."}
-        ],
-        "related": ["caretaker-services", "home-health-care-services", "patient-care-services"]
-    },
-    {
-        "id": "patient-care-services",
-        "folder": "patient-care-services",
-        "title": "Dedicated Patient Care Services at Home in Chennai",
-        "meta_title": "Patient Care Services Chennai | Bedside Patient Care | Sugam Home Care",
-        "meta_desc": "Bedside patient care services in Chennai. Attentive support for bedridden patients, stroke recovery, post-surgical care, and hygiene maintenance at home.",
-        "headline": "Dedicated Bedside Patient Care Services",
-        "tagline": "Attentive bedside support for bedridden or recovering individuals in Chennai.",
-        "icon": "🛏️",
-        "image": "assets/images/service-patient-care.svg",
-        "badge": "Bedside Recovery Support",
-        "who_benefits": [
-            {"title": "Bedridden or Immobilized Individuals", "desc": "Specialized bed care focusing on pressure point relief, comfort positioning, and meticulous hygiene."},
-            {"title": "Post-Operative Recovery Patients", "desc": "Gentle assistance following major orthopedic, spine, or general surgery during the initial recovery weeks."},
-            {"title": "Stroke & Neurological Recovery", "desc": "Supporting patients with hemiplegia or weakness with transfers, eating assistance, and daily care routines."},
-            {"title": "Critically Dependent Patients", "desc": "Continuous monitoring and physical support for individuals unable to perform self-care independently."}
-        ],
-        "scope": [
-            {"title": "Repositioning & Bedsore Prevention", "desc": "Regular 2-hour position turning, air mattress maintenance, and skin inspection to prevent pressure sores."},
-            {"title": "Bed Bathing & Personal Hygiene", "desc": "Thorough warm sponge bathing in bed, mouth care, hair hygiene, and prompt linen changes."},
-            {"title": "Adult Diaper & Underpad Care", "desc": "Timely diaper changes, thorough perineal cleaning, and application of protective barrier creams."},
-            {"title": "Non-Clinical Catheter & Tube Support", "desc": "Monitoring urine output, emptying catheter drainage bags hygienically, and keeping tubes untangled."},
-            {"title": "Feeding Support (Oral / Liquid)", "desc": "Patient feeding assistance with pureed diets, soups, or assisting family with Ryle's tube feeding timings."},
-            {"title": "Safe Transfers & Bed Exercises", "desc": "Gentle assistance transferring to wheelchairs or commode chairs and supporting passive limb movements."}
-        ],
-        "why_us": [
-            {"title": "Trained Bedside Attendants", "desc": "Experienced in safe lifting techniques, infection avoidance, and respectful handling of vulnerable patients."},
-            {"title": "Reduced Hospital Readmissions", "desc": "Consistent hygiene and attentive skin care prevent common post-discharge complications like UTIs and bedsores."},
-            {"title": "Relief for Family Caregivers", "desc": "Lifting and turning a heavy bedridden patient takes an immense physical toll. Our attendants bear that weight."}
-        ],
-        "faqs": [
-            {"q": "What is the difference between a patient care attendant and a registered nurse?", "a": "A patient care attendant handles hands-on physical care: turning, bed bathing, diapering, feeding assistance, and comfort. A registered nurse performs clinical procedures: administering IV medications, sterile dressing, and clinical catheterization."},
-            {"q": "How do you manage bedsores for bedridden individuals?", "a": "Our attendants focus on regular body turning, keeping skin clean and dry, using moisture barrier creams, and ensuring smooth, wrinkle-free bedsheets on air mattresses."},
-            {"q": "Can patient care be provided 24 hours a day?", "a": "Yes, we provide 24-hour round-the-clock patient care arrangements with dedicated day and night attendants."},
-            {"q": "What equipment is helpful to have at home?", "a": "Depending on the patient's condition, an adjustable hospital bed, ripple air mattress, adult diapers, wet wipes, and a wheelchair or commode chair are very helpful."},
-            {"q": "How quickly can patient care be arranged?", "a": "We encourage contacting us 24 to 48 hours before hospital discharge so we can assign an attendant ready for the patient's arrival home."}
-        ],
-        "related": ["nursing-services-at-home", "home-health-care-services", "elderly-care-services"]
-    },
-    {
-        "id": "nursing-services-at-home",
-        "folder": "nursing-services-at-home",
-        "title": "Qualified Nursing Services at Home in Chennai",
-        "meta_title": "Home Nursing Services Chennai | Qualified Nurses at Home | Sugam Home Care",
-        "meta_desc": "Qualified nursing services at home in Chennai. Injections, IV infusions, surgical wound dressings, catheterization, and post-operative clinical nursing.",
-        "headline": "Qualified Nursing Services at Home",
-        "tagline": "Clinical nursing procedures delivered at your doorstep under medical prescription.",
+        "id": "home-nurse-services",
+        "folder": "home-nurse-services",
+        "title": "Professional Home Nurse Services in Chennai & Tamil Nadu",
+        "meta_title": "Home Nurse Services Chennai | Visiting & 24/7 Nurses | Sugam Home Care",
+        "meta_desc": "Professional home nurse services in Chennai & Tamil Nadu. Qualified visiting or shift-based nurses for clinical procedures, injections, wound dressings, and IV therapy.",
+        "headline": "Home Nurse Services",
+        "tagline": "Qualified visiting or shift-based nurses for clinical procedures, injections, wound care, and recovery supervision.",
         "icon": "👩‍⚕️",
-        "image": "assets/images/service-nursing.svg",
-        "badge": "Qualified Clinical Care",
+        "image": "assets/images/service-home-nurse.svg",
+        "badge": "Professional Home Nursing",
         "who_benefits": [
-            {"title": "Patients Requiring Clinical Injections", "desc": "Safe administration of prescribed intramuscular (IM), subcutaneous (SC), or IV injections without hospital visits."},
-            {"title": "Post-Surgical Wound Dressing", "desc": "Aseptic dressing changes for surgical incisions, diabetic foot ulcers, bedsores, and suture removal."},
-            {"title": "Patients on IV Fluid Therapy", "desc": "Professional IV cannula insertion, IV infusion monitoring, and sterile line maintenance at home."},
-            {"title": "Patients with Catheters or Ryle's Tubes", "desc": "Urinary catheterization, bladder wash, and nasogastric tube insertion/feeding management by qualified nurses."}
+            {"title": "Patients Requiring Visiting Nurse Care", "desc": "Single or twice-daily nurse visits for injections, blood sugar profiling, and vitals checks."},
+            {"title": "Post-Surgical Convalescence Patients", "desc": "12-hour or 24-hour nursing supervision ensuring vitals stability, drainage tube monitoring, and comfort."},
+            {"title": "Elderly Patients with Complex Regimens", "desc": "Professional nurse administration of multiple subcutaneous, intramuscular, or nebulized medicines."},
+            {"title": "Patients on Continuous Monitoring", "desc": "Attentive nursing care tracking SpO2, pulse, blood pressure, and alerting family to any clinical anomalies."}
+        ],
+        "scope": [
+            {"title": "Doctor-Prescribed Injections", "desc": "Safe administration of intramuscular (IM), subcutaneous (SC), and intravenous (IV) injections."},
+            {"title": "Wound Care & Sterile Dressing", "desc": "Aseptic cleaning and dressing changes for surgical incisions, bedsores, diabetic foot ulcers, and drains."},
+            {"title": "IV Line Insertion & Infusion", "desc": "Peripheral IV cannula placement, maintenance, and controlled administration of prescribed IV fluids."},
+            {"title": "Catheter & Bladder Care", "desc": "Urinary catheterization, bladder irrigation, catheter bag replacement, and hygiene maintenance."},
+            {"title": "Clinical Health Record Maintenance", "desc": "Maintaining detailed medical charts recording vitals, fluid balance, and medication times for doctors."},
+            {"title": "Nebulization & Oxygen Support", "desc": "Administering doctor-ordered nebulizer treatments and monitoring supplemental oxygen flow."}
+        ],
+        "why_us": [
+            {"title": "Qualified & Verified Nurses", "desc": "Trained nursing personnel holding certified credentials (GNM/B.Sc Nursing) with clinical hospital experience."},
+            {"title": "Strict Prescription Protocols", "desc": "All procedures and drugs are administered strictly according to valid signed prescriptions from registered doctors."},
+            {"title": "Tamil Nadu Wide Service", "desc": "Visiting or shift nurses across Chennai, and 24-Hour full-day assignments all over Tamil Nadu."}
+        ],
+        "faqs": [
+            {"q": "Do you require a doctor's prescription for home nurse visits?", "a": "Yes. A valid doctor's prescription is required for administering injections, IV fluids, wound dressings, and catheter care."},
+            {"q": "Can a nurse visit just once a day for an injection or dressing?", "a": "Yes, we coordinate procedure-based single visits as well as 12-hour day/night or 24-hour continuous nursing shifts."},
+            {"q": "Are your home nurses trained in hospital emergency protocols?", "a": "Our nurses are qualified in clinical procedures and basic life support, but for acute medical emergencies, patients must contact 108 or proceed to a hospital."},
+            {"q": "Do you cover outside Chennai in Tamil Nadu?", "a": "Yes, across all districts of Tamil Nadu on a 24-Hour One-Day Full care basis."},
+            {"q": "How can I book a home nurse?", "a": "Call us at +91 84388 61636 or send your prescription via WhatsApp for prompt nurse assignment."}
+        ],
+        "related": ["nursing-services", "home-health-care-for-seniors", "patient-care-services"]
+    },
+    {
+        "id": "nursing-services",
+        "folder": "nursing-services",
+        "title": "Clinical Nursing Services at Home in Chennai & Tamil Nadu",
+        "meta_title": "Nursing Services at Home Chennai | Clinical Nursing Procedures | Sugam Home Care",
+        "meta_desc": "Qualified clinical nursing services at home in Chennai & Tamil Nadu. IV infusions, surgical wound dressings, catheterization, Ryle's tube care, and post-op care.",
+        "headline": "Nursing Services",
+        "tagline": "Clinical nursing procedures delivered at your doorstep under medical prescription.",
+        "icon": "💉",
+        "image": "assets/images/service-nursing.svg",
+        "badge": "Clinical Procedures",
+        "who_benefits": [
+            {"title": "Patients Requiring IV Therapy", "desc": "Professional IV cannula placement, antibiotic drips, and fluid infusions in the comfort of home."},
+            {"title": "Complex Surgical Wound Patients", "desc": "Sterile dressing changes for post-operative incisions, deep tissue ulcers, burns, and suture/staple removal."},
+            {"title": "Patients with Urinary Catheters", "desc": "Foley's catheter insertion, replacement, and regular bladder wash administered by qualified nurses."},
+            {"title": "Ryle's Tube & Tracheostomy Patients", "desc": "Supervision of nasogastric tube feeds, tube re-insertion, tracheostomy suctioning, and stoma dressing."}
         ],
         "scope": [
             {"title": "Doctor-Prescribed Injection Administration", "desc": "Administering antibiotics, insulin, pain management, or vitamin injections strictly per valid prescription."},
@@ -268,17 +424,26 @@ SERVICES = [
         "why_us": [
             {"title": "Qualified Nursing Professionals", "desc": "Trained nurses with clinical credentials, understanding aseptic techniques and doctor's orders."},
             {"title": "Strict Medical Protocol Adherence", "desc": "We administer medications and clinical procedures only upon verification of a valid doctor's prescription."},
-            {"title": "Avoid Hospital Travel & Infection Risks", "desc": "Receiving clinical nursing at home eliminates painful travel for fragile patients and reduces hospital-acquired infection risks."}
+            {"title": "Avoid Hospital Travel & Infection Risks", "desc": "Receiving clinical nursing at home eliminates painful travel for fragile patients and reduces hospital infection risks."}
         ],
         "faqs": [
-            {"q": "Do I need a doctor's prescription for home nursing services?", "a": "Yes, absolutely. For all clinical procedures including injections, IV infusions, wound dressings, and catheter insertion, a valid, signed prescription from your attending physician is mandatory."},
+            {"q": "Do I need a doctor's prescription for nursing services?", "a": "Yes, absolutely. For all clinical procedures including injections, IV infusions, wound dressings, and catheter insertion, a valid, signed prescription from your attending physician is mandatory."},
             {"q": "Can a nurse visit for single clinical procedures like an injection or dressing?", "a": "Yes, we coordinate procedure-based nurse visits (such as a single daily visit for wound dressing or antibiotic injections) as well as continuous shifts."},
             {"q": "Are emergency medical services included?", "a": "No. Our home nursing is intended for scheduled, prescribed clinical care. In case of an acute medical emergency, please call 108 or proceed to the nearest hospital emergency department."},
             {"q": "What medical consumables must the patient provide?", "a": "The patient's family should provide the prescribed medications, IV fluids, sterile dressing packets, disposable gloves, syringes, and catheters as prescribed by the doctor."},
-            {"q": "How can I request a home nurse in Chennai?", "a": "Call our team or submit the enquiry form with your doctor's prescription details and location in Chennai for prompt coordination."}
+            {"q": "How can I request a home nurse in Chennai or Tamil Nadu?", "a": "Call our team at +91 84388 61636 or submit the enquiry form with your doctor's prescription details for prompt coordination."}
         ],
-        "related": ["patient-care-services", "home-health-care-services", "elderly-care-services"]
+        "related": ["home-nurse-services", "patient-care-services", "bedridden-patient-care-services"]
     }
+]
+
+LOCATIONS = [
+    "Tambaram", "Vandalur", "Guduvanchery", "Sholinganallur", "Navalur", "OMR", "ECR", 
+    "Adyar", "Velachery", "Nanganallur", "Madipakkam", "Pallavaram", "Chromepet", 
+    "Alandur", "Guindy", "Adambakkam", "Taramani", "Nungambakkam", "Kodambakkam", 
+    "Chetpet", "Egmore", "Thousand Lights", "Royapettah", "Anna Nagar", "Mogappair", 
+    "Ambattur", "Avadi", "Porur", "Iyyappanthangal", "Ayanavaram", "Royapuram", 
+    "Purasawalkam", "Panaiyur", "Thoraipakkam", "Perungudi", "T. Nagar", "Ashok Nagar"
 ]
 
 def generate_service_page(svc):
@@ -294,8 +459,7 @@ def generate_service_page(svc):
           <div class="trust-icon-box">✓</div>
           <h3>{item["title"]}</h3>
           <p>{item["desc"]}</p>
-        </div>
-        '''
+        </div>'''
 
     # Scope of assistance cards
     scope_html = ""
@@ -307,8 +471,7 @@ def generate_service_page(svc):
             <h4>{s["title"]}</h4>
             <p>{s["desc"]}</p>
           </div>
-        </div>
-        '''
+        </div>'''
 
     # Why us cards
     why_html = ""
@@ -318,8 +481,7 @@ def generate_service_page(svc):
           <div class="benefit-number">0{idx}</div>
           <h3>{w["title"]}</h3>
           <p>{w["desc"]}</p>
-        </div>
-        '''
+        </div>'''
 
     # FAQs accordion
     faq_html = ""
@@ -334,8 +496,7 @@ def generate_service_page(svc):
           <div class="faq-answer">
             <div class="faq-answer-inner">{f["a"]}</div>
           </div>
-        </div>
-        '''
+        </div>'''
         faq_schema.append(f'''{{
           "@type": "Question",
           "name": "{f["q"]}",
@@ -368,8 +529,12 @@ def generate_service_page(svc):
                   <button type="button" class="btn btn-primary btn-open-modal" data-service="{r["headline"]}">Enquire</button>
                 </div>
               </div>
-            </article>
-            '''
+            </article>'''
+
+    # Location pills
+    loc_pills_html = ""
+    for loc in LOCATIONS:
+        loc_pills_html += f'<span class="area-pill">{loc}</span>\n                '
 
     faq_schema_str = ",\n        ".join(faq_schema)
 
@@ -416,7 +581,7 @@ def generate_service_page(svc):
             "addressCountry": "IN"
           }}
         }},
-        "areaServed": "Chennai",
+        "areaServed": ["Chennai", "Tamil Nadu"],
         "description": "{svc["meta_desc"]}"
       }},
       {{
@@ -474,7 +639,7 @@ def generate_service_page(svc):
         <div class="hero-content">
           <div class="hero-badge">
             <span style="font-size: 1.15rem;">{svc["icon"]}</span>
-            {svc["badge"]} • Chennai
+            {svc["badge"]} • Chennai &amp; Tamil Nadu
           </div>
 
           <h1 class="hero-headline">{svc["headline"]}</h1>
@@ -510,7 +675,7 @@ def generate_service_page(svc):
             <div class="enquiry-card-header">
               <span class="badge-tag">{svc["headline"]}</span>
               <h2 class="enquiry-card-title">Enquire for This Service</h2>
-              <p class="enquiry-card-subtitle">Connect with our care coordinator to discuss requirements and availability in Chennai.</p>
+              <p class="enquiry-card-subtitle">Connect with our care coordinator to discuss requirements and availability in Chennai or Tamil Nadu.</p>
             </div>
 
             <form class="lead-form" action="{rel}thank-you/" method="GET">
@@ -528,13 +693,17 @@ def generate_service_page(svc):
                 <label class="form-label">Service Required <span class="required">*</span></label>
                 <select name="service" class="form-control form-select" required>
                   <option value="{svc["headline"]}" selected>{svc["headline"]}</option>
-                  <option value="Maid Services">Maid Services</option>
-                  <option value="Home Health Care Services">Home Health Care Services</option>
-                  <option value="Caretaker Services">Caretaker Services</option>
-                  <option value="Baby Care Taker">Baby Care Taker</option>
-                  <option value="Elderly Care Services">Elderly Care Services</option>
-                  <option value="Patient Care Services">Patient Care Services</option>
-                  <option value="Nursing Services at Home">Nursing Services at Home</option>
+                  <option value="Baby care services">Baby care services</option>
+                  <option value="Elderly care services">Elderly care services</option>
+                  <option value="Patient care services">Patient care services</option>
+                  <option value="Senior citizen care services">Senior citizen care services</option>
+                  <option value="Bedridden patient care services">Bedridden patient care services</option>
+                  <option value="Home health care for seniors">Home health care for seniors</option>
+                  <option value="Dementia care for the elderly">Dementia care for the elderly</option>
+                  <option value="Home care for cancer patients">Home care for cancer patients</option>
+                  <option value="Caretaker services at home">Caretaker services at home</option>
+                  <option value="Home nurse services">Home nurse services</option>
+                  <option value="Nursing Services">Nursing Services</option>
                 </select>
               </div>
 
@@ -602,7 +771,7 @@ def generate_service_page(svc):
   <section class="section section-bg-warm">
     <div class="container">
       <div class="section-header">
-        <span class="badge-tag">Simple & Transparent</span>
+        <span class="badge-tag">Simple &amp; Transparent</span>
         <h2>How the Service Arrangement Process Works</h2>
         <p class="section-subtitle">Four straightforward steps to arrange dependable home care support for your family.</p>
       </div>
@@ -611,7 +780,7 @@ def generate_service_page(svc):
         <div class="step-card">
           <div class="step-badge">1</div>
           <h3>Tell Us Your Needs</h3>
-          <p>Submit the enquiry form or call our coordinator with your preferred timings and location in Chennai.</p>
+          <p>Submit the enquiry form or call our coordinator with your preferred timings and location in Chennai or Tamil Nadu.</p>
         </div>
 
         <div class="step-card">
@@ -639,7 +808,7 @@ def generate_service_page(svc):
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <span class="badge-tag">Benefits & Value</span>
+        <span class="badge-tag">Benefits &amp; Value</span>
         <h2>Why Families Choose Sugam for {svc["headline"]}</h2>
         <p class="section-subtitle">Compassionate support that brings peace of mind, reliable routines, and comfort at home.</p>
       </div>
@@ -665,8 +834,36 @@ def generate_service_page(svc):
     </div>
   </section>
 
-  <!-- 10. RELATED SERVICES -->
+  <!-- SERVICE COVERAGE LOCATIONS & TAMIL NADU NOTICE -->
   <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-tag">Where We Serve</span>
+        <h2>Coverage for {svc["headline"]}</h2>
+        <p class="section-subtitle">Available across 35+ major Chennai localities and all over Tamil Nadu.</p>
+      </div>
+
+      <div style="background: var(--bg-warm); border: 1px solid var(--border-light); border-radius: var(--radius-xl); padding: 2rem;">
+        <div style="background: linear-gradient(135deg, #0F2C59 0%, #163E7D 100%); color: #FFFFFF; border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.5rem;">
+          <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.35rem;">
+            <span style="font-size:1.25rem;">🚩</span>
+            <strong style="color:#2DD4BF; font-size:1rem;">All Over Tamil Nadu Service Availability:</strong>
+          </div>
+          <p style="color:#E2E8F0; font-size:0.875rem; line-height:1.5; margin-bottom:0;">
+            Outside our primary Chennai localities, {svc["headline"]} is provided across all districts of Tamil Nadu on a <strong>One-Day Full (24-Hour)</strong> basis.
+          </p>
+        </div>
+
+        <h4 style="color:var(--color-primary); margin-bottom:0.75rem;">Primary Chennai Coverage Areas:</h4>
+        <div class="service-areas-pills">
+          {loc_pills_html}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. RELATED SERVICES -->
+  <section class="section section-bg-surface">
     <div class="container">
       <div class="section-header">
         <span class="badge-tag">Explore More Services</span>
@@ -686,7 +883,7 @@ def generate_service_page(svc):
       <span class="badge-tag" style="background-color: rgba(255,255,255,0.15); color: #2DD4BF;">Take the First Step</span>
       <h2>Ready to Arrange {svc["headline"]}?</h2>
       <p>
-        Speak directly with our team to discuss timings, availability, and specific care preferences in Chennai.
+        Speak directly with our team to discuss timings, availability, and specific care preferences in Chennai or Tamil Nadu.
       </p>
       <div class="final-cta-buttons">
         <a href="tel:+918438861636" data-config="phoneTel" class="btn btn-white btn-lg">
@@ -717,7 +914,10 @@ def generate_service_page(svc):
         f.write(html.strip() + "\n")
     print(f"Generated: {filepath}")
 
-for s in SERVICES:
-    generate_service_page(s)
+def generate_all_services():
+    for s in SERVICES:
+        generate_service_page(s)
+    print("All 11 service landing pages generated successfully!")
 
-print("All 7 service pages generated successfully!")
+if __name__ == "__main__":
+    generate_all_services()

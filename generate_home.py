@@ -2,7 +2,7 @@
 import os
 import sys
 
-from site_templates import get_header, get_footer
+from site_templates import get_header, get_footer, GOOGLE_ADS_HEAD
 
 ROOT_DIR = "/Users/karthik/.gemini/antigravity/scratch/sugam-home-care"
 
@@ -186,6 +186,7 @@ def generate_home_page():
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{GOOGLE_ADS_HEAD}
   <title>Sugam Home Care Services Chennai | Compassionate Care at Home</title>
   <meta name="description" content="Sugam Home Care Services provides personalized home care, senior care, elderly care, patient care, bedridden care, cancer recovery, dementia care, and qualified home nursing across Chennai and all over Tamil Nadu.">
   <link rel="canonical" href="https://sugamhomecareservices.in/">

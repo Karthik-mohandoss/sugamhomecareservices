@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import os
-from site_templates import get_header, get_footer
+from site_templates import get_header, get_footer, GOOGLE_ADS_HEAD
 
 ROOT_DIR = "/Users/karthik/.gemini/antigravity/scratch/sugam-home-care"
 
@@ -543,6 +543,7 @@ def generate_service_page(svc):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{GOOGLE_ADS_HEAD}
   <title>{svc["meta_title"]}</title>
   <meta name="description" content="{svc["meta_desc"]}">
   <link rel="canonical" href="https://sugamhomecareservices.in/{svc["folder"]}/">

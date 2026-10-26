@@ -57,7 +57,21 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initModal();
   initHeaderScroll();
+  initGoogleAdsTracking();
 });
+
+/**
+ * Automatically binds Google Ads Click-to-Call Conversion Tracking
+ * to all phone call links and buttons across the website.
+ */
+function initGoogleAdsTracking() {
+  document.addEventListener('click', (e) => {
+    const callLink = e.target.closest('a[href^="tel:"]');
+    if (callLink && typeof gtag_report_conversion === 'function') {
+      gtag_report_conversion(callLink.href);
+    }
+  });
+}
 
 /**
  * Injects values from SITE_CONFIG into elements with data-config attributes.

@@ -3,6 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18536226621"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18536226621');
+    gtag('config', 'AW-18536226621/p8H3CJXguKodEL2-4YZF', {
+      'phone_conversion_number': '84388 61636'
+    });
+  </script>
+
+  <!-- Event snippet for Click to call (1) conversion page -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-18536226621/OU2_CJjguKodEL2-4YZF',
+        'value': 1.0,
+        'currency': 'INR',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
   <title>Caretaker Services at Home Chennai | Daily Living Assistance | Sugam Home Care</title>
   <meta name="description" content="Trusted caretaker services at home in Chennai & Tamil Nadu. Dedicated assistance with personal grooming, mobility, feeding, medication reminders, and companionship.">
   <link rel="canonical" href="https://sugamhomecareservices.in/caretaker-services-at-home/">

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import os
-from site_templates import get_header, get_footer
+from site_templates import get_header, get_footer, GOOGLE_ADS_HEAD
 
 ROOT_DIR = "/Users/karthik/.gemini/antigravity/scratch/sugam-home-care"
 
@@ -47,6 +47,7 @@ def generate_about_page():
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{GOOGLE_ADS_HEAD}
   <title>About Us | Sugam Home Care Services Chennai &amp; Tamil Nadu</title>
   <meta name="description" content="Learn about Sugam Home Care Services. Our mission, values, and commitment to compassionate, reliable home care, senior care, bedridden care, and nursing across Chennai and Tamil Nadu.">
   <link rel="canonical" href="https://sugamhomecareservices.in/about-us/">
@@ -168,6 +169,7 @@ def generate_contact_page():
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{GOOGLE_ADS_HEAD}
   <title>Contact Us | Sugam Home Care Services Chennai &amp; Tamil Nadu</title>
   <meta name="description" content="Contact Sugam Home Care Services. Call +91 84388 61636 or WhatsApp for home care, senior care, bedridden patient care, and nursing across Chennai and Tamil Nadu.">
   <link rel="canonical" href="https://sugamhomecareservices.in/contact-us/">
@@ -393,6 +395,7 @@ def generate_services_directory():
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{GOOGLE_ADS_HEAD}
   <title>All Home Care Services | Sugam Home Care Services Chennai &amp; Tamil Nadu</title>
   <meta name="description" content="Explore all 11 home care services provided by Sugam Home Care Services: Baby Care, Elderly Care, Patient Care, Senior Citizen Care, Bedridden Care, Dementia Care, Cancer Care, and Nursing.">
   <link rel="canonical" href="https://sugamhomecareservices.in/services/">
@@ -469,6 +472,7 @@ def generate_privacy_page():
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{GOOGLE_ADS_HEAD}
   <title>Privacy Policy | Sugam Home Care Services</title>
   <meta name="description" content="Privacy Policy for Sugam Home Care Services. Explaining how we collect, use, and protect your personal contact information.">
   <link rel="canonical" href="https://sugamhomecareservices.in/privacy-policy/">
@@ -558,6 +562,7 @@ def generate_terms_page():
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{GOOGLE_ADS_HEAD}
   <title>Terms and Conditions | Sugam Home Care Services</title>
   <meta name="description" content="Terms and Conditions governing the use of Sugam Home Care Services website and home care coordination services.">
   <link rel="canonical" href="https://sugamhomecareservices.in/terms-and-conditions/">
@@ -630,6 +635,7 @@ def generate_thank_you_page():
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{GOOGLE_ADS_HEAD}
   <title>Thank You | Sugam Home Care Services</title>
   <meta name="description" content="Thank you for contacting Sugam Home Care Services. Our care coordinator will call you back shortly.">
   <meta name="robots" content="noindex, follow">

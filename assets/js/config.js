@@ -165,9 +165,11 @@ const SITE_CONFIG = {
   
   // Google Ads Tracking Configuration
   googleAds: {
-    conversionId: "AW-CONVERSION_ID_PLACEHOLDER",
-    conversionLabel: "CONVERSION_LABEL_PLACEHOLDER",
-    enabled: false
+    conversionId: "AW-18536226621",
+    callConversionLabel: "OU2_CJjguKodEL2-4YZF",
+    phoneForwardingLabel: "p8H3CJXguKodEL2-4YZF",
+    phoneConversionNumber: "84388 61636",
+    enabled: true
   }
 };
 

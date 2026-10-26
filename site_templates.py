@@ -23,6 +23,38 @@ SERVICES_NAV = [
     {"name": "Nursing Services", "slug": "nursing-services", "icon": "💉"}
 ]
 
+# Official Google Ads (gtag.js) tracking scripts
+GOOGLE_ADS_HEAD = '''  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18536226621"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18536226621');
+    gtag('config', 'AW-18536226621/p8H3CJXguKodEL2-4YZF', {
+      'phone_conversion_number': '84388 61636'
+    });
+  </script>
+
+  <!-- Event snippet for Click to call (1) conversion page -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-18536226621/OU2_CJjguKodEL2-4YZF',
+        'value': 1.0,
+        'currency': 'INR',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>'''
+
 def get_header(current_path, depth=0):
     rel = "./" if depth == 0 else "../"
     

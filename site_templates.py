@@ -102,7 +102,7 @@ def get_header(current_path, depth=0):
   <div class="container navbar">
     <!-- Brand Logo -->
     <a href="{rel}" class="navbar-brand" aria-label="Sugam Home Care Services Home">
-      <img src="{rel}assets/images/logo.svg" alt="Sugam Home Care Services Logo" class="brand-logo-img" width="220" height="48">
+      <img src="{rel}assets/images/logo.svg" alt="Sugam Home Care Services Logo" class="brand-logo-img" width="240" height="52">
     </a>
 
     <!-- Desktop Navigation -->
@@ -132,7 +132,7 @@ def get_header(current_path, depth=0):
       </a>
       <a href="tel:+918438861636" data-config="phoneTel" class="btn-header-call" aria-label="Call Sugam Home Care Services">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
-        Call Now
+        <span class="btn-call-text">Call Now</span>
       </a>
 
       <!-- Hamburger Menu for Mobile -->
@@ -329,9 +329,9 @@ def get_footer(depth=0):
 </div>
 
 <!-- Scripts -->
-<script src="{rel}assets/js/config.js?v=4"></script>
-<script src="{rel}assets/js/main.js?v=4"></script>
-<script src="{rel}assets/js/form.js?v=4"></script>
+<script src="{rel}assets/js/config.js?v=5"></script>
+<script src="{rel}assets/js/main.js?v=5"></script>
+<script src="{rel}assets/js/form.js?v=5"></script>
 '''
 
 print("Updated site_templates.py successfully!")

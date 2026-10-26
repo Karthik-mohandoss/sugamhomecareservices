@@ -77,8 +77,10 @@
 }
 
 .brand-logo-img {
-  height: 48px;
+  height: 52px;
   width: auto;
+  max-width: 250px;
+  object-fit: contain;
 }
 
 .brand-text-logo {
@@ -366,12 +368,15 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .navbar {
-    height: 68px;
+    height: 70px;
+    padding: 0 0.85rem;
   }
   .brand-logo-img {
-    height: 38px;
+    height: 44px;
+    max-width: calc(100vw - 115px);
+    width: auto;
   }
   .brand-name {
     font-size: 1.15rem;
@@ -380,11 +385,46 @@
     font-size: 0.6rem;
   }
   .mobile-nav-drawer {
-    top: 68px;
+    top: 70px;
+  }
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .header-actions .btn-header-whatsapp {
+    display: none !important;
   }
   .header-actions .btn-header-call {
-    padding: 0.5rem 0.85rem;
-    font-size: 0.8rem;
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0 !important;
+    background-color: var(--color-primary);
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(15, 43, 72, 0.22);
+    border: none;
+  }
+  .header-actions .btn-header-call .btn-call-text,
+  .header-actions .btn-header-call span {
+    display: none !important;
+  }
+  .header-actions .btn-header-call svg,
+  .header-actions .btn-header-call .icon {
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 !important;
+    stroke: currentColor;
+    fill: none;
+  }
+  .hamburger-btn {
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -540,10 +580,217 @@
 @media (max-width: 960px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
   }
   .hero-section {
     padding: 2.5rem 0 3.5rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* --------------------------------------------------------------------------
+     Hero & Form Mobile Layout - Elevated & High-Converting
+     -------------------------------------------------------------------------- */
+  .hero-section,
+  .service-hero-section {
+    padding: 1.15rem 0 2rem 0 !important;
+  }
+
+  .hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.15rem !important;
+  }
+
+  .hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.65rem !important;
+  }
+
+  /* 1. Mobile Headline: Responsive, Scaled, Fits Perfectly */
+  .hero-headline {
+    font-size: clamp(1.4rem, 5.6vw, 1.85rem) !important;
+    line-height: 1.22 !important;
+    letter-spacing: -0.025em !important;
+    margin-bottom: 0.2rem !important;
+    order: 2;
+  }
+
+  .hero-badge {
+    order: 1;
+    align-self: flex-start;
+    padding: 0.25rem 0.65rem !important;
+    font-size: 0.72rem !important;
+    gap: 0.35rem !important;
+  }
+
+  /* 2. Text Scaling: Compact & Crisp */
+  .hero-description {
+    order: 3;
+    font-size: 0.88rem !important;
+    line-height: 1.45 !important;
+    color: var(--text-muted) !important;
+    margin-bottom: 0.25rem !important;
+    max-width: 100% !important;
+  }
+
+  /* 3. Elevate Form: Puts the form right below the short description */
+  .hero-card-wrapper {
+    order: 4 !important;
+    width: 100% !important;
+    margin-top: 0.25rem !important;
+  }
+
+  /* Hide redundant buttons on mobile hero so form is immediately in view */
+  .hero-cta-group {
+    display: none !important;
+  }
+
+  .hero-phone-cta {
+    order: 5 !important;
+    font-size: 0.82rem !important;
+    padding: 0.25rem 0 !important;
+    margin-top: 0.25rem !important;
+  }
+
+  .hero-phone-icon-wrap {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .hero-phone-icon-wrap .icon {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  .hero-trust-list {
+    order: 6 !important;
+    margin-top: 0.5rem !important;
+    padding-top: 0.75rem !important;
+    gap: 0.5rem !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .hero-trust-item {
+    font-size: 0.76rem !important;
+    gap: 0.35rem !important;
+  }
+
+  .hero-trust-icon {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  /* Compact & Polished Form Card */
+  .enquiry-card {
+    padding: 1.25rem 1rem !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07) !important;
+  }
+
+  .enquiry-card-header {
+    margin-bottom: 0.75rem !important;
+  }
+
+  .enquiry-card-header .badge-tag {
+    font-size: 0.7rem !important;
+    padding: 0.2rem 0.55rem !important;
+  }
+
+  .enquiry-card-title {
+    font-size: 1.15rem !important;
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  .enquiry-card-subtitle {
+    font-size: 0.78rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .lead-form {
+    gap: 0.65rem !important;
+  }
+
+  .form-group {
+    gap: 0.25rem !important;
+  }
+
+  .form-label {
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+  }
+
+  .form-control {
+    padding: 0.6rem 0.75rem !important;
+    font-size: 0.92rem !important;
+    min-height: 42px !important;
+    border-radius: 6px !important;
+  }
+
+  .form-consent {
+    margin-top: 0.15rem !important;
+    font-size: 0.72rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .btn-submit-lead {
+    padding: 0.75rem 1rem !important;
+    font-size: 0.95rem !important;
+    min-height: 44px !important;
+    margin-top: 0.25rem !important;
+    border-radius: 8px !important;
+  }
+
+  .form-security-note {
+    font-size: 0.7rem !important;
+    margin-top: 0.35rem !important;
+  }
+
+  /* 4. Global Mobile Headings & Typography */
+  h1 {
+    font-size: clamp(1.4rem, 5.6vw, 1.85rem) !important;
+    line-height: 1.22 !important;
+  }
+
+  h2 {
+    font-size: clamp(1.2rem, 4.6vw, 1.5rem) !important;
+    line-height: 1.25 !important;
+  }
+
+  h3 {
+    font-size: clamp(1.05rem, 3.6vw, 1.22rem) !important;
+    line-height: 1.3 !important;
+  }
+
+  .section {
+    padding: 2.25rem 0 !important;
+  }
+
+  .section-header {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .section-header .badge-tag {
+    font-size: 0.72rem !important;
+    padding: 0.2rem 0.55rem !important;
+  }
+
+  .section-subtitle {
+    font-size: 0.85rem !important;
+    line-height: 1.45 !important;
+  }
+
+  p {
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .breadcrumbs {
+    font-size: 0.75rem !important;
+    margin-bottom: 0.5rem !important;
+    padding: 0.25rem 0 !important;
   }
 }
 

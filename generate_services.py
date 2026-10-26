@@ -557,8 +557,8 @@ def generate_service_page(svc):
   <meta property="og:image" content="https://sugamhomecareservices.in/{svc["image"]}">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="{rel}assets/css/style.css">
-  <link rel="stylesheet" href="{rel}assets/css/components.css">
+  <link rel="stylesheet" href="{rel}assets/css/style.css?v=5">
+  <link rel="stylesheet" href="{rel}assets/css/components.css?v=5">
 
   <!-- Structured Data: Service + BreadcrumbList + FAQPage -->
   <script type="application/ld+json">

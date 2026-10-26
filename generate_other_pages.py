@@ -249,8 +249,8 @@ def generate_contact_page():
             <div class="contact-info-content">
               <h4>Email Enquiries</h4>
               <p>
-                <a href="mailto:care@sugamhomecareservices.in" data-config="email" style="color:var(--color-secondary); font-weight:600;">
-                  care@sugamhomecareservices.in
+                <a href="mailto:sugamhomecare35@gmail.com" data-config="email" style="color:var(--color-secondary); font-weight:600;">
+                  sugamhomecare35@gmail.com
                 </a>
               </p>
             </div>
@@ -530,7 +530,7 @@ def generate_privacy_page():
         <p style="color: var(--text-main); font-weight: 600;">
           Sugam Home Care Services<br>
           No. 123/12, Kattabomman Street, Kamaraj Nagar, New Perungalathur, Chennai – 600063, Tamil Nadu, India.<br>
-          Email: <span data-config="email">care@sugamhomecareservices.in</span><br>
+          Email: <span data-config="email">sugamhomecare35@gmail.com</span><br>
           Phone: <span data-config="phoneDisplay">+91 84388 61636</span>
         </p>
       </div>

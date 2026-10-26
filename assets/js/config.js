@@ -20,9 +20,9 @@ const SITE_CONFIG = {
   whatsappLink: "https://wa.me/918438861636?text=Hello%20Sugam%20Home%20Care%20Services,%20I%20would%20like%20to%20enquire%20about%20home%20care%20services.",
   
   // Email
-  email: "care@sugamhomecareservices.in",
-  enquiryEmail: "akrithmarketer@gmail.com",
-  enquiryRecipients: ["akrithmarketer@gmail.com", "care@sugamhomecareservices.in"],
+  email: "sugamhomecare35@gmail.com",
+  enquiryEmail: "sugamhomecare35@gmail.com",
+  enquiryRecipients: ["sugamhomecare35@gmail.com"],
   
   // Office Address (Chennai)
   address: {

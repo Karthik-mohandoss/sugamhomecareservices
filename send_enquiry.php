@@ -53,8 +53,7 @@ $timestamp = date('d M Y, h:i A T');
 $clientIp  = $_SERVER['REMOTE_ADDR'] ?? 'Unknown';
 
 // Recipients
-$primaryEmail   = 'akrithmarketer@gmail.com';
-$secondaryEmail = 'care@sugamhomecareservices.in';
+$primaryEmail = 'sugamhomecare35@gmail.com';
 
 // Quick WhatsApp link for admin to click and chat with customer
 $cleanPhoneForWa = preg_replace('/[^0-9]/', '', $phone);
@@ -154,8 +153,7 @@ $plainText .= "WhatsApp: " . $waDirectLink . "\n";
 $headers  = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset=UTF-8\r\n";
 $headers .= "From: Sugam Home Care <noreply@sugamhomecareservices.in>\r\n";
-$headers .= "Reply-To: Sugam Care <care@sugamhomecareservices.in>\r\n";
-$headers .= "Cc: " . $secondaryEmail . "\r\n";
+$headers .= "Reply-To: Sugam Home Care <sugamhomecare35@gmail.com>\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 
 // 1. Send Email

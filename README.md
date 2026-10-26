@@ -8,7 +8,7 @@ A high-performance, mobile-first website designed for **Sugam Home Care Services
 
 ## 📞 Direct Contact
 - **Phone / WhatsApp:** `+91 84388 61636`
-- **Email:** `care@sugamhomecareservices.in`
+- **Email:** `sugamhomecare35@gmail.com`
 - **Office Address:** No. 123/12, Kattabomman Street, Kamaraj Nagar, New Perungalathur, Chennai – 600063, Tamil Nadu, India.
 
 ---

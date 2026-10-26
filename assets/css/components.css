@@ -1528,3 +1528,10 @@
   background-color: var(--border-light);
   color: var(--color-primary);
 }
+
+/* Fallback: Hide any legacy Preferred Contact Time field if stale cached HTML is loaded */
+[name="preferredTime"],
+.form-group:has([name="preferredTime"]),
+.form-group:has(label[for*="preferredTime"]) {
+  display: none !important;
+}

@@ -4,25 +4,40 @@
  * and automatic cache-bust validation for CDN edge updates.
  */
 
-// Auto Cache-Buster: If edge CDN or browser cache serves stale HTML (e.g. Maid Services),
-// immediately force-refresh to load the latest live version seamlessly.
-(function() {
+// Auto Cache-Buster & DOM Cleaner
+function cleanLegacyElements() {
   try {
+    // 1. Remove Preferred Contact Time from all forms immediately
+    document.querySelectorAll('[name="preferredTime"]').forEach(el => {
+      const group = el.closest('.form-group');
+      if (group) group.remove();
+      else el.remove();
+    });
+
+    document.querySelectorAll('label').forEach(label => {
+      if (label.textContent && label.textContent.toLowerCase().includes('preferred contact time')) {
+        const group = label.closest('.form-group');
+        if (group) group.remove();
+        else label.remove();
+      }
+    });
+
+    // 2. Check for stale HTML version requiring refresh
     const hasOldMaidService = document.querySelector('a[href*="maid-services"]');
     const missingSeniorCare = !document.querySelector('a[href*="senior-citizen-care-services"]');
     const isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.pathname === '';
     
     if (isHomePage && (hasOldMaidService || missingSeniorCare)) {
-      if (!window.location.search.includes('v=2')) {
+      if (!window.location.search.includes('v=3')) {
         const targetUrl = new URL(window.location.href);
-        targetUrl.searchParams.set('v', '2');
+        targetUrl.searchParams.set('v', '3');
         window.location.replace(targetUrl.toString());
         return;
       }
     }
     
-    // When cleanly loaded with fresh content, quietly remove the cache-bust query param from the address bar
-    if (window.location.search.includes('v=2') && !hasOldMaidService && !missingSeniorCare) {
+    // Clean up query param from address bar once fresh version is loaded
+    if (window.location.search.includes('v=') && !hasOldMaidService && !missingSeniorCare) {
       if (window.history && window.history.replaceState) {
         window.history.replaceState(null, '', window.location.pathname);
       }
@@ -30,9 +45,13 @@
   } catch (e) {
     // Graceful fallback
   }
-})();
+}
+
+// Run immediately upon script parsing
+cleanLegacyElements();
 
 document.addEventListener('DOMContentLoaded', () => {
+  cleanLegacyElements();
   initDynamicConfig();
   initMobileNav();
   initFaqAccordion();

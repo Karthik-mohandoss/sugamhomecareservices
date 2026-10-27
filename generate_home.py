@@ -200,8 +200,8 @@ def generate_home_page():
   <meta property="og:image" content="https://sugamhomecareservices.in/assets/images/logo.svg">
   
   <!-- Styles -->
-  <link rel="stylesheet" href="assets/css/style.css?v=5">
-  <link rel="stylesheet" href="assets/css/components.css?v=5">
+  <link rel="stylesheet" href="assets/css/style.css?v=6">
+  <link rel="stylesheet" href="assets/css/components.css?v=6">
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">

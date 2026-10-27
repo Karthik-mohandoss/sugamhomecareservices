@@ -52,8 +52,8 @@ def generate_about_page():
   <meta name="description" content="Learn about Sugam Home Care Services. Our mission, values, and commitment to compassionate, reliable home care, senior care, bedridden care, and nursing across Chennai and Tamil Nadu.">
   <link rel="canonical" href="https://sugamhomecareservices.in/about-us/">
   <link rel="icon" type="image/svg+xml" href="{rel}assets/images/favicon.svg">
-  <link rel="stylesheet" href="{rel}assets/css/style.css?v=6">
-  <link rel="stylesheet" href="{rel}assets/css/components.css?v=6">
+  <link rel="stylesheet" href="{rel}assets/css/style.css?v=7">
+  <link rel="stylesheet" href="{rel}assets/css/components.css?v=7">
 </head>
 <body>
 
@@ -174,8 +174,8 @@ def generate_contact_page():
   <meta name="description" content="Contact Sugam Home Care Services. Call +91 84388 61636 or WhatsApp for home care, senior care, bedridden patient care, and nursing across Chennai and Tamil Nadu.">
   <link rel="canonical" href="https://sugamhomecareservices.in/contact-us/">
   <link rel="icon" type="image/svg+xml" href="{rel}assets/images/favicon.svg">
-  <link rel="stylesheet" href="{rel}assets/css/style.css?v=6">
-  <link rel="stylesheet" href="{rel}assets/css/components.css?v=6">
+  <link rel="stylesheet" href="{rel}assets/css/style.css?v=7">
+  <link rel="stylesheet" href="{rel}assets/css/components.css?v=7">
 </head>
 <body>
 
@@ -400,8 +400,8 @@ def generate_services_directory():
   <meta name="description" content="Explore all 11 home care services provided by Sugam Home Care Services: Baby Care, Elderly Care, Patient Care, Senior Citizen Care, Bedridden Care, Dementia Care, Cancer Care, and Nursing.">
   <link rel="canonical" href="https://sugamhomecareservices.in/services/">
   <link rel="icon" type="image/svg+xml" href="{rel}assets/images/favicon.svg">
-  <link rel="stylesheet" href="{rel}assets/css/style.css?v=6">
-  <link rel="stylesheet" href="{rel}assets/css/components.css?v=6">
+  <link rel="stylesheet" href="{rel}assets/css/style.css?v=7">
+  <link rel="stylesheet" href="{rel}assets/css/components.css?v=7">
 </head>
 <body>
 
@@ -477,8 +477,8 @@ def generate_privacy_page():
   <meta name="description" content="Privacy Policy for Sugam Home Care Services. Explaining how we collect, use, and protect your personal contact information.">
   <link rel="canonical" href="https://sugamhomecareservices.in/privacy-policy/">
   <link rel="icon" type="image/svg+xml" href="{rel}assets/images/favicon.svg">
-  <link rel="stylesheet" href="{rel}assets/css/style.css?v=6">
-  <link rel="stylesheet" href="{rel}assets/css/components.css?v=6">
+  <link rel="stylesheet" href="{rel}assets/css/style.css?v=7">
+  <link rel="stylesheet" href="{rel}assets/css/components.css?v=7">
 </head>
 <body>
 
@@ -567,8 +567,8 @@ def generate_terms_page():
   <meta name="description" content="Terms and Conditions governing the use of Sugam Home Care Services website and home care coordination services.">
   <link rel="canonical" href="https://sugamhomecareservices.in/terms-and-conditions/">
   <link rel="icon" type="image/svg+xml" href="{rel}assets/images/favicon.svg">
-  <link rel="stylesheet" href="{rel}assets/css/style.css?v=6">
-  <link rel="stylesheet" href="{rel}assets/css/components.css?v=6">
+  <link rel="stylesheet" href="{rel}assets/css/style.css?v=7">
+  <link rel="stylesheet" href="{rel}assets/css/components.css?v=7">
 </head>
 <body>
 
@@ -649,8 +649,8 @@ def generate_thank_you_page():
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://sugamhomecareservices.in/thank-you/">
   <link rel="icon" type="image/svg+xml" href="{rel}assets/images/favicon.svg">
-  <link rel="stylesheet" href="{rel}assets/css/style.css?v=6">
-  <link rel="stylesheet" href="{rel}assets/css/components.css?v=6">
+  <link rel="stylesheet" href="{rel}assets/css/style.css?v=7">
+  <link rel="stylesheet" href="{rel}assets/css/components.css?v=7">
 
   <script>
     window.addEventListener('DOMContentLoaded', () => {{

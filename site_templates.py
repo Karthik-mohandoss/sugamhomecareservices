@@ -32,12 +32,12 @@ GOOGLE_ADS_HEAD = '''  <!-- Google tag (gtag.js) -->
     gtag('js', new Date());
 
     gtag('config', 'AW-18536226621');
-    gtag('config', 'AW-18536226621/p8H3CJXguKodEL2-4YZF', {
+    gtag('config', 'AW-18536226621/7SECCK_h57EdEL2-4YZF', {
       'phone_conversion_number': '84388 61636'
     });
   </script>
 
-  <!-- Event snippet for Click to call (1) conversion page -->
+  <!-- Event snippet for Click to call (2) conversion page -->
   <script>
   function gtag_report_conversion(url) {
     var callback = function () {
@@ -46,7 +46,7 @@ GOOGLE_ADS_HEAD = '''  <!-- Google tag (gtag.js) -->
       }
     };
     gtag('event', 'conversion', {
-        'send_to': 'AW-18536226621/OU2_CJjguKodEL2-4YZF',
+        'send_to': 'AW-18536226621/WPYKCLLh57EdEL2-4YZF',
         'value': 1.0,
         'currency': 'INR',
         'event_callback': callback
@@ -329,9 +329,9 @@ def get_footer(depth=0):
 </div>
 
 <!-- Scripts -->
-<script src="{rel}assets/js/config.js?v=7"></script>
-<script src="{rel}assets/js/main.js?v=7"></script>
-<script src="{rel}assets/js/form.js?v=7"></script>
+<script src="{rel}assets/js/config.js?v=8"></script>
+<script src="{rel}assets/js/main.js?v=8"></script>
+<script src="{rel}assets/js/form.js?v=8"></script>
 '''
 
 print("Updated site_templates.py successfully!")

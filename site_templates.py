@@ -23,8 +23,11 @@ SERVICES_NAV = [
     {"name": "Nursing Services", "slug": "nursing-services", "icon": "💉"}
 ]
 
-# Official Google Ads (gtag.js) tracking scripts
-GOOGLE_ADS_HEAD = '''  <!-- Google tag (gtag.js) -->
+# Official Google Ads (gtag.js) tracking scripts & Google Search Console Verification
+GOOGLE_ADS_HEAD = '''  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="QXVtbbOCrGUYiUgY3yYllHHPsGW8LDVUM9sGugAWVmE" />
+
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18536226621"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
